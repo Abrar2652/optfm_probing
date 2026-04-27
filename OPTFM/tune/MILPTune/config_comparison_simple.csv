@@ -1,0 +1,9 @@
+Instances,Methods,Primal Bound,Dual Bound,Solving Time,Gap,Nodes,Status
+item_placement_10093.mps.gz,config,43.98876134900003,0.00016116900002706306,150.002406,,,
+item_placement_10093.mps.gz,default,1e+20,0.0001611690001443629,150.000495,,,
+item_placement_10073.mps.gz,config,1e+20,0.0,150.0006,,,
+item_placement_10073.mps.gz,default,1e+20,0.0,150.00077,,,
+item_placement_10080.mps.gz,config,32.437414801000024,0.2401753895334939,150.001453,,,
+item_placement_10080.mps.gz,default,1e+20,0.0,150.000614,,,
+item_placement_10001.mps.gz,config,1e+20,0.0002501793005157526,150.001288,,,
+item_placement_10001.mps.gz,default,1e+20,0.00025017930008097017,150.000506,,,

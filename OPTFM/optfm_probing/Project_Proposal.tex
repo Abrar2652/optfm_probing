@@ -1,0 +1,868 @@
+%% NeurIPS-style submission, self-contained preamble (no external .sty required).
+%% Compile with: pdflatex Project_Proposal.tex (twice for cross-references).
+\documentclass[11pt]{article}
+
+%% ---------- Geometry & typography (NeurIPS-like) ----------
+\usepackage[letterpaper, top=1.0in, bottom=1.0in, left=1.25in, right=1.25in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage{microtype}
+\usepackage{setspace}\setstretch{1.02}
+\usepackage{parskip}\setlength{\parskip}{3pt}
+
+%% ---------- Math, graphics, tables ----------
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{caption}\captionsetup{font=small, labelfont=bf, skip=4pt}
+\usepackage{subcaption}
+\usepackage{float}
+
+%% ---------- Hyperlinks & cross-refs ----------
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black,
+            pdftitle={OPTFM is 1-WL bounded on bipartite MILPs},
+            pdfauthor={Md Abrar Jahin and Shahriar Tanvir Alam}}
+\usepackage[capitalise,noabbrev]{cleveref}
+
+%% ---------- Sections (NeurIPS-style flush left, sans-bold) ----------
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titlespacing*{\section}{0pt}{12pt}{4pt}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+\titleformat{\subsubsection}[runin]{\itshape}{\thesubsubsection}{0.4em}{}
+\titlespacing*{\subsubsection}{0pt}{4pt}{0.6em}
+
+%% ---------- Theorem environments ----------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+%% ---------- Listings (used only briefly in appendix) ----------
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true,
+        frame=single, framerule=0.3pt, xleftmargin=4pt, columns=fullflexible}
+
+%% ---------- Macros ----------
+\newcommand{\optfm}{\textsc{OPTFM}}
+\newcommand{\sgformer}{\textsc{SGFormer}}
+\newcommand{\rwpe}{\textsc{RWPE}}
+\newcommand{\rni}{\textsc{RNI}}
+\newcommand{\given}{\,\vert\,}
+\newcommand{\multiset}[1]{\{\!\!\{#1\}\!\!\}}
+\DeclareMathOperator*{\Pool}{Pool}
+\DeclareMathOperator*{\HASH}{HASH}
+\DeclareMathOperator*{\LinAttn}{LinAttn}
+
+\title{\vspace{-1.3cm}\textbf{\Large OPTFM is 1-WL Bounded on Bipartite MILPs:\\
+A Theorem, a Two-Family Empirical Probe, and a Structural Probe Battery}}
+
+\author{
+\textbf{Md Abrar Jahin}\;\,\textbf{Shahriar Tanvir Alam}\\
+University of Southern California\\
+\texttt{\{mdabrar, shahriar\}@usc.edu}
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\noindent
+We investigate whether \optfm{}~\cite{yuan2025optfm}---the first graph foundation
+model for combinatorial optimization---escapes the 1-Weisfeiler--Lehman (1-WL)
+expressiveness bound of Chen et al.~\cite{chen2023expressive} for bipartite
+mixed-integer linear programs (MILPs). \optfm{} motivates its hierarchical
+multi-view cross-attention as ``going beyond the local interaction structure of
+standard GNNs.'' We show this is not the case. \textbf{Theorem.} The full
+hierarchical \optfm{} encoder (the \texttt{SGFormer\_MIP\_hierarchical\_improve}
+class shipped in \optfm{}'s source) is 1-WL bounded for \emph{any} weight
+setting; the bound is preserved by \optfm{}'s virtual-global-node pretraining
+augmentation. \textbf{Empirical probe.} On 15 verified 1-WL-equivalent
+non-isomorphic bipartite MILP pairs from two structurally independent families
+(2-regular cycles \(C_{4k}\) vs \(k\cdot C_4\) for \(k\!\in\!\{2,\dots,30\}\),
+plus a 3-regular cubic pair), six architectures including the random-init full
+hierarchical \optfm{} produce \emph{bit-identical} graph embeddings on every
+pair. Layer-wise instrumentation confirms the bound holds at every sub-layer.
+A 2-class supervised fine-tune of backbone+head pins cross-entropy at
+\(\ln 2\!\approx\!0.6931\) for 300 epochs across seeds---training cannot
+escape an architectural bound. \textbf{Probe battery.} An MLP probe on frozen
+pretrained embeddings collapses from \(R^2\!=\!{+}0.387\) on random MILPs to
+\(R^2\!=\!{-}0.011\) on 1-WL-equivalent MILPs for \texttt{n\_components},
+\emph{despite the target having six times larger variance} on the latter.
+A minimal Random Walk Positional Encoding transform breaks the bound across
+all architectures, confirming the probe is genuinely falsifiable.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+Graph neural networks (GNNs) for mixed-integer programming have been studied
+extensively as policy or representation networks for branch-and-bound and
+its surrogates~\citep{gasse2019exact, khalil2017learning, gupta2020hybrid}.
+Chen et al.~\cite{chen2023expressive} established that any message-passing
+GNN applied to a bipartite-graph encoding of a MILP is at most as
+discriminative as 1-Weisfeiler--Lehman (1-WL) color refinement. They
+exhibited a pair of feature-labeled bipartite MILPs that are 1-WL equivalent
+but differ in feasibility---demonstrating that the bound is tight for the
+most basic decision in optimization.
+
+\optfm{}~\cite{yuan2025optfm}, the first foundation model for
+combinatorial optimization, proposes a hierarchical multi-view graph
+transformer specifically motivated as going \emph{beyond} GNN-style local
+interaction via global linear attention and edge-weighted cross-attention
+between constraint and variable nodes. The OPTFM paper claims that this
+architecture ``enhances representational power,'' but provides neither an
+expressiveness theorem nor a test on known indistinguishable pairs.
+
+\paragraph{Question.} Does \optfm{}'s hierarchical encoder distinguish 1-WL
+equivalent non-isomorphic bipartite MILPs?
+
+\paragraph{Contributions.}
+\begin{enumerate}[leftmargin=18pt, topsep=0pt, itemsep=1pt]
+    \item \textbf{Theorem (\Cref{sec:theorem}).} For any weights, \optfm{}'s
+    hierarchical encoder factors through 1-WL equivalence. The proof composes
+    five lemmas covering \sgformer{}-style linear attention~\cite{wu2023sgformer},
+    \optfm{}'s additive edge-weighted cross-attention, the bipartite GCN
+    branch~\cite{gasse2019exact}, mean/sum/max pooling, and the
+    virtual-global-node pretraining augmentation.
+
+    \item \textbf{Two-family empirical probe (\Cref{sec:main}).} On 15 verified
+    1-WL-equivalent non-isomorphic bipartite MILP pairs drawn from two
+    structurally independent families (2-regular cycles and a 3-regular cubic
+    pair), six architectures including the full hierarchical \optfm{} produce
+    bit-identical pooled embeddings on every pair. Layer-wise instrumentation
+    confirms the bound stage-by-stage (\Cref{fig:layerwise}). A supervised
+    fine-tune of the backbone plus a 2-class linear head pins the cross-entropy
+    loss at $\ln 2 \approx 0.6931$ for 300 epochs across three seeds
+    (\Cref{fig:plateau})---training cannot escape an architectural bound.
+
+    \item \textbf{Probe battery (\Cref{sec:probes}).} On 800 random bipartite
+    MILPs, an MLP probe on frozen pretrained \optfm{} embeddings predicts
+    \texttt{n\_components} at $R^2={+}0.387$. On 420 1-WL-equivalent MILPs the
+    same probe collapses to $R^2={-}0.011$, despite a $6{\times}$ larger target
+    variance. The \texttt{lp\_value} target is at chance on both populations,
+    indicating that the masked-edge pretraining objective does not induce
+    LP-aware representations.
+
+    \item \textbf{Falsifiability (\Cref{sec:rwpe}).} Injecting Random Walk
+    Positional Encodings~\cite{dwivedi2022rwpe} into three previously-zero
+    Ecole feature slots breaks the bit-identity for every architecture and
+    family, ruling out the ``pathological pair'' defense.
+\end{enumerate}
+
+In the course of this investigation we also discovered that the ``canonical
+1-WL pair'' of variable-feature-equivariant bipartite MILPs widely used as a
+sanity-check in earlier probing code is in fact \emph{graph-isomorphic} as a
+feature-labeled bipartite graph; we document this artifact in
+\Cref{app:broken-canonical} and built our probe families to be free of it.
+
+\section{Preliminaries}
+\label{sec:prelim}
+
+\paragraph{Feature-labeled bipartite MILP.}
+Following~\cite{gasse2019exact, chen2023expressive}, a feature-labeled
+bipartite MILP is a tuple $M = (C, V, A, f_C, f_V)$ with constraint nodes $C$,
+variable nodes $V$, coefficient matrix $A \in \mathbb R^{|C|\times|V|}$, and
+per-node features $f_C, f_V$. We use Ecole's \texttt{MilpBipartite}
+extractor: $d_v=9$ variable features (objective coefficient, integrality
+flag, bound flags and values, basis status, reduced cost, solution value)
+and $d_c=1$ constraint feature (normalized RHS $b_i / \|A_i\|_2$). The
+\optfm{} pretrained checkpoint was trained on these exact features.
+
+\paragraph{1-WL refinement.}
+For a feature-labeled bipartite MILP $M$, the iterative coloring is
+\begin{equation}\label{eq:wl}
+\chi^{(0)}(u) = f(u),\quad \chi^{(t+1)}(u) = \HASH\!\Big(\chi^{(t)}(u),\,
+   \multiset{(\chi^{(t)}(w), A_{uw}) : w \sim u}\Big),
+\end{equation}
+where $\multiset{\cdot}$ denotes a multiset. Two MILPs $M_1, M_2$ are
+\emph{1-WL equivalent}, written $M_1 \equiv_{1\text{WL}} M_2$, if for every
+$t$ the global color multisets coincide. Isomorphism implies 1-WL
+equivalence; the converse is false in general~\cite{cai1992lower}.
+
+\paragraph{The hierarchical \optfm{} encoder.}
+The class \texttt{SGFormer\_MIP\_hierarchical\_improve}
+in \texttt{OPTFM/node\_pretrain/ours\_crossattention\_improve.py} maps a
+bipartite MILP to a graph embedding $z\in\mathbb R^h$ via
+(i) input embeddings $\tilde V_0 = W_v f_V$, $\tilde C_0 = W_c f_C$;
+(ii) intra-type \sgformer{} self-attention on each side independently;
+(iii) cross-attention with edge-weighted aggregation, defined for the $C\to V$
+pass as
+\begin{equation}\label{eq:cross}
+\tilde V_2 = W_o \big[\,\LinAttn(\tilde V_1, \tilde C_1);\;
+                          A^\top \tilde C_1\,\big],
+\end{equation}
+and symmetrically $V\to C$;
+(iv) a parallel bipartite GCN branch
+$(\tilde V^{(g)},\tilde C^{(g)}) = \texttt{GNNPolicy}(\cdots)$
+following~\cite{gasse2019exact};
+(v) convex fuse $\tilde V = \alpha \tilde V^{(g)} + (1-\alpha) \tilde V_2$
+and analogously for $\tilde C$;
+(vi) pooling $z = \Pool(\tilde C \oplus \tilde V)$ with
+$\Pool\in\{\text{mean},\text{sum},\text{max}\}$.
+
+The \sgformer{} linear-attention block~\cite{wu2023sgformer} computes for each
+query index $i$
+\begin{equation}\label{eq:linattn}
+\LinAttn(Q,X)_i = D_i^{-1}\!\Big(V_i + \tfrac{1}{N}\,\tilde Q_i\,\big(\tilde K^\top V\big)\Big),
+\quad D_i = 1 + \tfrac{1}{N}\tilde Q_i (\tilde K^\top \mathbf 1),
+\end{equation}
+with Frobenius-norm normalized $\tilde Q = W_q Q / \|W_q Q\|_F$ and
+$\tilde K = K/\|K\|_F$. The pretraining pipeline in
+\texttt{OPTFM/node\_pretrain/main\_mip.py}, lines 148--171, additionally
+appends two virtual global nodes per subgraph: a constraint-side global with
+feature equal to the mean of constraint features (connected to every variable
+with unit weight) and a variable-side analogue.
+
+\section{OPTFM is 1-WL bounded}
+\label{sec:theorem}
+
+\begin{theorem}[\optfm{} hierarchical encoder is 1-WL bounded]
+\label{thm:main}
+Let $M_1, M_2$ be feature-labeled bipartite MILPs with $M_1 \equiv_{1\text{WL}} M_2$.
+For \emph{any} weights $\theta$ of the hierarchical \optfm{} encoder
+\(\Phi_\theta = \texttt{SGFormer\_MIP\_hierarchical\_improve}\) and any pooling
+in $\{\text{mean},\text{sum},\text{max}\}$,
+\begin{equation*}
+\Phi_\theta(M_1) \;=\; \Phi_\theta(M_2).
+\end{equation*}
+The same conclusion holds when both inputs are augmented with the
+virtual-global-node construction from \optfm{}'s pretraining pipeline.
+\end{theorem}
+
+\begin{corollary}\label{cor:concrete}
+\optfm{} cannot distinguish $C_{4k}$-bipartite from $k\cdot C_4$-bipartite for
+any $k\!\ge\!2$, nor the connected $6{+}6$ cubic bipartite graph from
+$2\cdot K_{3,3}$, despite both pairs being non-isomorphic.
+\end{corollary}
+
+\subsection{Lemmas}
+
+We say an operator $\Phi$ is \emph{1-WL bounded} if multiset-equal node
+inputs produce multiset-equal node outputs.
+
+\begin{lemma}[Linear attention is a multiset function of the source]\label{lem:linattn}
+For \(Q,K,V\in\mathbb R^{N\times d}\) arising from a node-wise linear map,
+\(\LinAttn(Q,X)_i\) defined in~\Cref{eq:linattn} depends only on $(q_i, v_i)$
+and on the multisets $\multiset{k_\ell}$ and $\multiset{(k_\ell, v_\ell)}$.
+\end{lemma}
+\begin{proof}
+Both $\sum_\ell k_\ell^\top v_\ell$ and $\sum_\ell k_\ell^\top \mathbf 1$ are
+commutative sums over $\ell$, hence symmetric functions of the multiset of
+source pairs. The Frobenius normalizer $\|Q\|_F^2 = \sum_j \|q_j\|_2^2$ is a
+sum of per-node quantities. LayerNorm, residual, ReLU, and dropout (identity
+at eval) are per-node. \qedhere
+\end{proof}
+
+\begin{lemma}[Cross-attention with edge-weighted aggregation]\label{lem:cross}
+The block \texttt{TransConvCross} that linearly attends across types and
+concatenates the dense edge-weighted message $A^\top \tilde c$ before a linear
+projection (\Cref{eq:cross}) is 1-WL bounded.
+\end{lemma}
+\begin{proof}
+Linear attention is bounded by~\Cref{lem:linattn}. The aggregation
+$m_j = \sum_i A_{ij}\,\tilde c_i$ is a sum over the edge-weighted neighborhood
+$\multiset{(A_{ij},\tilde c_i)}$, which 1-WL equivalence preserves by
+construction. Concatenation and a per-node linear projection commute with
+multiset equivalence. The variable-to-constraint pass is symmetric. \qedhere
+\end{proof}
+
+\begin{lemma}[The bipartite GCN branch]\label{lem:gcn}
+The branch \texttt{GNNPolicy} in both the baseline and hierarchical
+\optfm{} variants is 1-WL bounded on graph-level outputs.
+\end{lemma}
+\begin{proof}
+\texttt{GNNPolicy} is a Gasse-style bipartite MPNN~\cite{gasse2019exact} with
+two convolutional layers; it instantiates the MPNN class for which Xu et
+al.~\cite{xu2019powerful} and Morris et al.~\cite{morris2019wlgo} proved the
+1-WL bound, and which Chen et al.~\cite{chen2023expressive} specialized to
+bipartite MILPs. \qedhere
+\end{proof}
+
+\begin{lemma}[Convex fuse and pooling]\label{lem:fuse}
+The fuse $\tilde v \mapsto \alpha\tilde v^{(g)}+(1-\alpha)\tilde v$ (and
+analogously for $\tilde c$) is per-node, and mean/sum/max pooling are
+symmetric functions of their input multiset; both preserve 1-WL bounds.
+\end{lemma}
+
+\begin{lemma}[Virtual global nodes preserve 1-WL]\label{lem:virtnode}
+Let $T$ append a global constraint node with feature
+$\bar f_C = |C|^{-1}\sum_c f_C(c)$, a global variable node with feature
+$\bar f_V = |V|^{-1}\sum_v f_V(v)$, unit-weight edges from the global
+constraint to every variable, and unit-weight edges from the global variable
+to every constraint. If $M_1 \equiv_{1\text{WL}} M_2$, then
+$T(M_1) \equiv_{1\text{WL}} T(M_2)$.
+\end{lemma}
+\begin{proof}
+At iteration 0, $\bar f_C(M_1)=\bar f_C(M_2)$ and similarly for $\bar f_V$
+because the original feature multisets are equal by hypothesis. At iteration
+$t{+}1$, every original node's color refinement~(\Cref{eq:wl}) gains the
+single neighborhood term $(\chi^{(t)}(\text{global}), 1)$, which is identical
+in $M_1$ and $M_2$ by induction on $t$. The global nodes themselves see the
+entire (multiset-equal) opposite-side neighborhood and therefore share the
+same color across the two graphs. \qedhere
+\end{proof}
+
+\subsection{Proof of \Cref{thm:main}}
+
+Apply~\Cref{lem:virtnode} to optionally augment with virtual global nodes;
+1-WL equivalence is preserved. Propagate stage-by-stage through the encoder:
+input embeddings (per-node, trivially preserve multiset equivalence);
+\texttt{TransConvSelf} (\Cref{lem:linattn}); \texttt{TransConvCross}
+(\Cref{lem:cross}); \texttt{GNNPolicy} (\Cref{lem:gcn}); convex fuse and
+pooling (\Cref{lem:fuse}). At every stage, multiset equivalence is the
+loop invariant. Hence $\Phi_\theta(M_1) = \Phi_\theta(M_2)$. \qed
+
+\paragraph{Remark on scope.}
+The theorem is a strong, quantifier-over-weights statement: no
+optimization trajectory through $\Theta$ can find a weight setting that
+distinguishes a 1-WL equivalent pair. The bound is escapable only by input
+transformations that are not themselves 1-WL invariants---random node
+features~\cite{abboud2020rni, sato2021random} or positional
+encodings~\cite{dwivedi2022rwpe}. We exploit this in~\Cref{sec:rwpe} as the
+positive control of our probe.
+
+\section{Empirical setup}
+\label{sec:setup}
+
+\paragraph{Pair families.}
+We use two structurally independent families of feature-labeled bipartite
+MILP pairs verified to be 1-WL equivalent and non-isomorphic.
+\textbf{Family I (2-regular cycles)}, $k\!\in\!\{2,3,4,5,6,7,8,9,10,12,15,20,25,30\}$:
+$G_A(k) = C_{4k}$-bipartite is a single $4k$-cycle alternating constraint and
+variable nodes; $G_B(k) = k\cdot C_4$-bipartite is $k$ disjoint
+$K_{2,2}$'s. Both have $2k$ constraints, $2k$ variables, all of degree 2.
+With uniform $b\!=\!1$ the Ecole RHS feature is $1/\sqrt 2$ uniformly,
+forcing 1-WL refinement to a single color class. They differ only in
+connectivity: $G_A$ has 1 component, $G_B(k)$ has $k$.
+\textbf{Family II (3-regular cubic)}: $G_A$ is a connected 3-regular
+bipartite graph on $6{+}6$ vertices built from the circulant offsets
+$\{0,1,3\}\bmod 6$; $G_B = K_{3,3}\sqcup K_{3,3}$. 1-WL equivalence by
+uniform cubic regularity; 1 vs 2 components.
+
+Equivalence and non-isomorphism are verified by brute-force permutation
+search for $|C|+|V|\!\le\!12$ and NetworkX VF2 feature-labeled bipartite
+isomorphism checks for larger pairs (\texttt{data/milp\_pairs\_v2.diagnose\_pair}).
+\Cref{fig:families} shows the two families.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\linewidth]{results/figures/fig1_pair_families.pdf}
+\caption{\textbf{Two structurally independent 1-WL-equivalent non-isomorphic
+bipartite MILP pair families.} Constraints (circles) and variables (squares);
+edges from the nonzero pattern of $A$. Nodes are colored by their 1-WL
+fixed-point class---uniform features collapse every constraint into one class
+(blue) and every variable into one class (orange) in both members of each
+pair. (a) $G^{\mathrm I}_A$: a single $4k$-cycle ($k{=}3$ shown, 12 vertices,
+connected). (b) $G^{\mathrm I}_B$: $k$ disjoint $C_4$'s ($k$ components).
+(c) $G^{\mathrm{II}}_A$: connected 3-regular bipartite on $6{+}6$ vertices
+from circulant offsets $\{0,1,3\}\bmod 6$. (d) $G^{\mathrm{II}}_B$: $K_{3,3}
+\sqcup K_{3,3}$. Within each family, members share the 1-WL color histogram
+at every depth but differ in number of connected components---a 1-WL-invisible
+graph invariant.}
+\label{fig:families}
+\end{figure}
+
+\paragraph{Models.}
+Six architectures are probed: the pretrained \sgformer{}+GCN baseline
+(\texttt{Models\_SCIP/model\_params\_epoch\_31.pth}, 6{,}820 parameters,
+verified loaded with $\texttt{strict=True}$ in
+\texttt{scripts/verify\_weights.py}); the same architecture at random
+initialization; \texttt{TransConvOnly} (1{,}344 params); \texttt{GNNOnly}
+(5{,}602 params); a 2-layer \texttt{SimpleGCN} (736 params); and the full
+hierarchical \optfm{} (\texttt{HierarchicalOPTFM} in
+\texttt{models/optfm\_hierarchical.py}, 10{,}852 params)---a dense-operation
+port of \texttt{SGFormer\_MIP\_hierarchical\_improve} that does not require
+\texttt{torch\_sparse} (which has no prebuilt wheel for recent PyTorch on
+Windows). Since 1-WL boundedness is an architectural property
+(\Cref{thm:main} quantifies over $\theta$), random initialization suffices to
+probe the hierarchical variant.
+
+\paragraph{Input transforms.}
+Eight transforms registered in \texttt{scripts/improvements.TRANSFORMS}:
+\texttt{baseline} (identity); \texttt{rnf\_sigma\_0.3}, \texttt{rnf\_sigma\_1.0}
+(Gaussian random node features into the three zero Ecole variable slots,
+$\sigma\!\in\!\{0.3, 1.0\}$, 30 i.i.d.\ samples per pair);
+\texttt{lp\_primal}, \texttt{lp\_reduced}, \texttt{lp\_primal\_dual} (LP-derived
+features); \texttt{rwpe\_steps\_4\_6\_8} (Random Walk Positional Encoding
+return probabilities $P^L[i,i]$ at $L\!\in\!\{4,6,8\}$); and
+\texttt{virtual\_global\_node} (the pretraining augmentation from
+\texttt{OPTFM/node\_pretrain/main\_mip.py} lines 148--171).
+
+\paragraph{Metrics.}
+For each (model, transform, pair) cell we report mean cosine similarity
+$\overline{\cos}(\Phi(G_A), \Phi(G_B))$, a 2{,}000-sample bootstrap 95\% CI,
+and the fraction of samples where embeddings are bit-identical
+(\texttt{exact\_frac}, computed via \texttt{torch.allclose} with
+$\text{atol}\!=\!10^{-5}$).
+
+\section{Main result: bit-identical embeddings on 1-WL pairs}
+\label{sec:main}
+
+\Cref{tab:main} reports the baseline, virtual-global-node, and
+\rwpe{} columns of the main 6-model $\times$ 8-transform $\times$ 15-pair
+grid (full grid in \texttt{results/main/20260410\_200438/report.txt}).
+Every architecture, including the pretrained \sgformer{}+GCN and the full
+random-init hierarchical \optfm{}, produces $\overline{\cos}\!=\!1.000000$
+with bit-identical embeddings on every one of the 15 pairs. The
+virtual-global-node augmentation (Lemma~\ref{lem:virtnode}) leaves this
+unchanged. \rwpe{} (\Cref{sec:rwpe}) breaks the bit-identity for every
+architecture, with $\texttt{exact\_frac}\!=\!0$.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Main result. Each cell is the mean cosine similarity over the 15
+1-WL-equivalent non-isomorphic pairs (Family I + Family II). Bracketed values
+are 95\% bootstrap CIs; \texttt{exact \%} is the fraction of pairs where
+$\Phi(G_A)$ and $\Phi(G_B)$ are bit-identical
+($\|\cdot\|_\infty\!\le\!10^{-5}$). \textbf{Baseline}: theorem prediction holds
+for every architecture. \textbf{VGN}: empirical confirmation of
+\Cref{lem:virtnode}. \textbf{\rwpe{}}: positive control---every architecture
+drops below 1.0; the bound \emph{is} falsifiable.}
+\label{tab:main}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+& \multicolumn{2}{c}{Baseline} & \multicolumn{1}{c}{VGN} & \multicolumn{2}{c}{\rwpe{} (4,6,8)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-4}\cmidrule(lr){5-6}
+Model & $\overline{\cos}$ & exact \% & $\overline{\cos}$ & $\overline{\cos}$ & exact \% \\
+\midrule
+\sgformer{}+GCN (pretrained)        & 1.000000 & 100.0 & 1.000000 & 0.999486 & 0.0 \\
+\sgformer{}+GCN (random)            & 1.000000 & 100.0 & 1.000000 & 0.998728 & 0.0 \\
+\texttt{TransConvOnly} (random)     & 1.000000 & 100.0 & 1.000000 & 0.994253 & 0.0 \\
+\texttt{GNNOnly} (random)           & 1.000000 & 100.0 & 1.000000 & 0.999994 & 0.0 \\
+\texttt{SimpleGCN} (random)         & 1.000000 & 100.0 & 1.000000 & 0.994561 & 0.0 \\
+\textbf{Hierarchical \optfm{} (random)} & \textbf{1.000000} & \textbf{100.0} & \textbf{1.000000} & \textbf{0.994022} & \textbf{0.0} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{results/figures/fig2_main_result.pdf}
+\caption{\textbf{1-WL boundedness is architecturally universal.}
+(a) Per-cell distance from bit-identical, $1-\overline{\cos}(G_A,G_B)$,
+on a logarithmic color scale; mean over 15 1-WL-equivalent non-isomorphic
+pairs. Cells marked `=' hit bit-identical
+($\overline{\cos}=1.000000$ to within $10^{-5}$). The Baseline and VGN
+columns are `=' across all six architectures. \texttt{lp\_primal} is `='
+for most models because variable features stay uniform on both graphs
+(only the dual-feedback channel occasionally leaks signal). Only \rwpe{}
+reliably produces a non-trivial gap. (b) Scale invariance. For every
+$k\!\in\!\{2,\dots,30\}$ on Family I, all six architectures sit at
+$\overline{\cos}=1.0$; the hierarchical \optfm{} under \rwpe{} (open
+squares, dashed) is plotted as a falsifiability reference and drops below
+1.0 at every scale.}
+\label{fig:main}
+\end{figure}
+
+\subsection{Layer-wise verification}
+\label{sec:layerwise}
+
+The proof of \Cref{thm:main} proves the bound stage-by-stage. We instrument
+the hierarchical \optfm{} and compute $\overline{\cos}(G_A, G_B)$ on the
+pooled representation after each of its nine sub-layers
+(\Cref{fig:layerwise}). The baseline curve sits at
+$\overline{\cos}\!=\!1.0\pm 10^{-7}$ at every stage across 5 random
+initializations, empirically verifying~\Cref{lem:linattn}--\Cref{lem:fuse}
+individually. The VGN curve coincides at the same noise level, confirming
+\Cref{lem:virtnode} layer-by-layer. The \rwpe{} curve drops below 1.0 at
+the first sub-layer that sees the perturbed input (S1), propagates through
+self-attention and cross-attention with genuine seed variance, and---notably
+---recovers toward 1.0 at S6 because the GCN branch re-embeds from the raw
+input via a parameter group whose random-init response is effectively blind
+to the \rwpe{} channels. This recovery partially attenuates the signal after
+fusion at S7 and pooling at S8, explaining why the end-to-end \rwpe{} drop
+in~\Cref{tab:main} is modest in cosine.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\linewidth]{results/figures/fig4_layerwise.pdf}
+\caption{\textbf{The 1-WL bound holds at every sub-layer of the hierarchical
+\optfm{}, not only end-to-end.} $\overline{\cos}(G_A,G_B)$ on the pooled
+representation after each sub-layer, on the $k\!=\!10$ Family I pair.
+Stages are grouped by the lemma they corroborate. Curves are the mean over
+5 independent random initializations of the hierarchical \optfm{}.
+\textbf{Baseline} (blue): $\overline{\cos}=1.0\pm 10^{-7}$ at every stage,
+empirically verifying~\Cref{lem:linattn,lem:cross,lem:gcn,lem:fuse}.
+\textbf{VGN} (green): coincides with baseline,
+empirically confirming~\Cref{lem:virtnode}. \textbf{\rwpe{}} (red,
+dashed; band = min--max over seeds): the signal enters at S1, propagates
+through self/cross-attention, partially recovers at S6 because the GCN
+branch re-embeds from the raw input.}
+\label{fig:layerwise}
+\end{figure}
+
+\subsection{Training cannot overcome the bound}
+\label{sec:plateau}
+
+A natural reviewer concern is that the previous results use only random or
+pretrained weights without optimization on the pair task. \Cref{thm:main}
+rules out the possibility that training can find weights distinguishing a
+1-WL-equivalent pair, but we verify this directly. We attach a 2-class
+linear head to the mean-pooled hidden state of the hierarchical \optfm{}
+and jointly train backbone+head as a binary classifier separating $G_A(k)$
+(label 0) from $G_B(k)$ (label 1) on all 30 examples from the 15 pairs
+(balanced 50/50). Cross-entropy loss, Adam at lr $10^{-3}$, full-batch,
+300 epochs, 3 seeds (\texttt{scripts/finetune\_pair\_classifier.py}).
+
+\paragraph{Theoretical floor.}
+If \Cref{thm:main} holds, the pooled embedding is bit-identical for $G_A$
+and $G_B$ at every step, the head outputs identical logits for both inputs
+of every pair, and the loss is pinned at
+$\mathcal L^\star = \tfrac{1}{2}(-\log p - \log(1-p))$ minimized at
+$p=1/2$, giving $\mathcal L^\star = \ln 2 \approx 0.693147$.
+
+\paragraph{Result (\Cref{fig:plateau}).}
+Baseline final losses across seeds:
+$0.693147,\,0.693147,\,0.693147$---matching $\ln 2$ to six decimal places.
+Initial random-head losses were $0.6939, 0.6997, 0.7206$. Training is
+moving the loss but only \emph{toward} the theoretical floor; it cannot
+cross it. End-of-training pooled-embedding identity is preserved on every
+one of the 15 pairs ($\texttt{frac\_pairs\_identical} = 1.000$). With \rwpe{}
+on the same architecture and training procedure, the loss converges to
+$2{\times}10^{-6}$, $2.7{\times}10^{-4}$, and $4.8{\times}10^{-4}$ across
+the three seeds (5--7 decades below the baseline plateau), and the
+embedding identity is broken on every pair
+($\texttt{frac\_pairs\_identical} = 0$).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\linewidth]{results/figures/fig5_training_plateau.pdf}
+\caption{\textbf{Training cannot overcome the 1-WL bound.} Cross-entropy loss
+vs.\ epoch for a 2-class linear-head classifier trained jointly with the
+hierarchical \optfm{} backbone on the 15-pair 1-WL-equivalent population
+(3 seeds per curve). \textbf{Baseline} (blue, solid): loss plateaus at
+$\ln 2 \approx 0.693147$ to six decimals across all seeds for all 300 epochs;
+end-of-training pooled embeddings remain bit-identical for every pair.
+\textbf{\rwpe{}} (red, dashed): same architecture and training procedure
+with \rwpe{}(4,6,8) inputs converges to $\sim\!3\!\times\!10^{-4}$ and breaks
+the pooled-embedding identity on every pair.}
+\label{fig:plateau}
+\end{figure}
+
+\section{Probe battery: structural and primal--dual targets}
+\label{sec:probes}
+
+Cosine similarity is a coarse metric. A finer probe asks: \emph{given frozen
+\optfm{} embeddings, can a probe predict a structural or primal--dual
+target?}
+
+\paragraph{Datasets.}
+$\mathcal D_{\text{rand}}$: 800 random bipartite MILPs at $(n_C, n_V)=(10,10)$,
+sparsity $\approx\!0.25$, 50/50 equality/$\le$ constraints, random RHS and
+objective; $\texttt{n\_components}\!\in\![1,5]$, $\texttt{lp\_value}\!\in\![-6.77, 4.52]$.
+$\mathcal D_{\text{1wl}}$: 420 instances. For every $k\!\in\!\{2,\dots,30\}$ and
+each of 15 random objective vectors, take both $C_{4k}$- and $k\!\cdot\!C_4$-
+bipartite MILPs with that objective. All instances are mutually 1-WL
+equivalent; $\texttt{n\_components}\!\in\![1,30]$ (\textbf{6$\times$ larger
+variance} than $\mathcal D_{\text{rand}}$),
+$\texttt{lp\_value}\!\in\![-29.16, 8.06]$.
+
+\paragraph{Probes.}
+Linear (\texttt{LinearProbe}) and 64-unit 2-hidden-layer MLP
+(\texttt{MLPProbe}). 70/30 train/test split, Adam lr $10^{-2}$, 800 epochs,
+5 seeds.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Frozen-backbone probe scores. Targets: \texttt{n\_components}
+(regression $R^2$), \texttt{lp\_value} (regression $R^2$), \texttt{girth\_le\_4}
+and \texttt{feasible} (classification accuracy, majority baseline in parens).
+The load-bearing row is \texttt{n\_components} (MLP): $R^2$ collapses from
+${+}0.387$ on $\mathcal D_{\text{rand}}$ to ${-}0.011$ on $\mathcal
+D_{\text{1wl}}$ \emph{despite the target having $6{\times}$ larger variance
+on the latter}.}
+\label{tab:probes}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Target & $\mathcal D_{\text{rand}}$ (positive control) & $\mathcal D_{\text{1wl}}$ (target) \\
+\midrule
+\texttt{n\_components} linear $R^2$ & ${+}0.213\pm 0.060$ & ${-}0.012\pm 0.014$ \\
+\texttt{n\_components} MLP $R^2$    & $\mathbf{{+}0.387 \pm 0.103}$ & $\mathbf{{-}0.011 \pm 0.014}$ \\
+\texttt{lp\_value} linear $R^2$     & ${-}0.005\pm 0.022$ & ${-}0.015\pm 0.010$ \\
+\texttt{lp\_value} MLP $R^2$        & ${-}0.000\pm 0.018$ & ${-}0.009\pm 0.011$ \\
+\texttt{girth\_le\_4} linear acc    & 0.972 (maj 0.971)  & 0.449 (maj 0.551) \\
+\texttt{girth\_le\_4} MLP acc       & 0.973 (maj 0.971)  & 0.449 (maj 0.551) \\
+\texttt{feasible} linear acc        & 0.889 (maj 0.889)  & 1.000 (degenerate) \\
+\texttt{feasible} MLP acc           & 0.889 (maj 0.889)  & 1.000 (degenerate) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{results/figures/fig3_probe_battery.pdf}
+\caption{\textbf{Frozen-backbone probe $R^2$ collapses on the 1-WL population
+despite larger target variance.} (a) Linear and MLP probe scores for four
+graph-level targets: $R^2$ for regression, accuracy-minus-majority for
+classification. On random MILPs (positive control, blue), the MLP recovers
+\texttt{n\_components} at $R^2\!=\!{+}0.40$. On the 1-WL-equivalent population
+(red), the same probe collapses to $R^2\!=\!{-}0.01$. Error bars: $\pm 1$ std
+over 5 seeds. \texttt{lp\_value} is at chance on both populations; \texttt{girth\_le\_4}
+fits \emph{worse} than the majority classifier on $\mathcal D_{\text{1wl}}$,
+consistent with embedding blindness; \texttt{feasible} is degenerate on
+$\mathcal D_{\text{1wl}}$. (b) Variance sanity check: 1-WL targets have
+$\ge$ as much variance as random ($6{\times}$ for \texttt{n\_components}),
+ruling out a degenerate-target explanation.}
+\label{fig:probes}
+\end{figure}
+
+\paragraph{Interpretation.}
+The load-bearing cell is the second row of \Cref{tab:probes}. The collapse
+from $R^2\!=\!{+}0.387$ to $R^2\!=\!{-}0.011$ happens even though
+$\texttt{n\_components}$ varies six times more on $\mathcal D_{\text{1wl}}$
+than on $\mathcal D_{\text{rand}}$---ruling out a degenerate-target
+explanation. The $\texttt{lp\_value}$ rows give a complementary signal: on
+random MILPs the embedding cannot predict LP value above chance, suggesting
+the masked-edge pretraining objective does not implicitly induce LP-aware
+representations. The $\texttt{girth\_le\_4}$ row is below the majority
+baseline on $\mathcal D_{\text{1wl}}$, consistent with the embedding being
+\emph{blind} to the distinguishing invariant.
+
+\section{Falsifiability via \rwpe{}}
+\label{sec:rwpe}
+
+A purely null result invites the ``pathological pair'' objection: maybe
+\emph{no} model can distinguish $C_{4k}$ from $k\cdot C_4$ regardless of
+input. Random Walk Positional Encodings~\cite{dwivedi2022rwpe} are strictly
+more expressive than 1-WL: at step $L\!=\!4$, $P^4[i,i] = 3/8$ on $C_{4k}$
+($k\!\ge\!2$) but $P^4[i,i] = 1/2$ on $k\cdot C_4$. We inject return
+probabilities at $L\!\in\!\{4,6,8\}$ into the three zero-valued Ecole
+variable feature slots, plus $L\!=\!4$ into the constraint feature
+(\texttt{scripts/improvements.make\_rwpe\_transform}).
+
+The \rwpe{} columns of \Cref{tab:main} show every architecture drops below
+$\overline{\cos}\!=\!1.0$, with $\texttt{exact\_frac}$ falling from 100\%
+to 0\% on every architecture and both families. The drops are largest for
+the simpler GCN-style architectures and the hierarchical \optfm{}; the
+randomly-initialized GNN-only ablation barely moves because its random
+weight matrices happen to attenuate the \rwpe{} input signal.
+
+The composition of this falsifiability test with the layer-wise probe
+(\Cref{fig:layerwise}) and the supervised fine-tune (\Cref{fig:plateau})
+makes the strongest possible empirical case. The architectural bound holds
+end-to-end, at every sub-layer, and survives 300 epochs of optimization;
+yet a strictly more-expressive input transform breaks all three
+simultaneously.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{Relation to prior work.}
+Chen et al.~\cite{chen2023expressive} proved the 1-WL bound for MPNNs on
+bipartite MILPs and exhibited a pair where feasibility differs across the
+1-WL class. We extend their argument to an architecture explicitly motivated
+as going \emph{beyond} GNN-style local interaction: \optfm{}'s hierarchical
+multi-view cross-attention. Our two new lemmas
+(\Cref{lem:linattn,lem:virtnode}) cover the architectural novelty---global
+linear attention with edge-weighted cross-attention, and the
+virtual-global-node pretraining augmentation---which were not analyzed in
+prior work. Joshi et al.~\cite{joshi2024} ported the 1-WL argument to
+geometric GNNs; ours is the corresponding port to combinatorial
+optimization foundation models.
+
+\paragraph{What we have not established.}
+The theorem is an expressiveness statement, not a utility statement. It
+does not contradict \optfm{}'s reported gains on CA, MIS, MVC, and SC
+benchmarks~\cite{yuan2025optfm}, because those tasks admit 1-WL solutions on
+generic inputs---the bound is not the binding constraint there. We have not
+retrained \optfm{} with \rwpe{} features (the pretraining dataset is not
+fully public and requires multi-A100 compute) nor extended the formal
+analysis to \optfm{}'s graph-level contrastive pretraining stage, which
+operates on subgraph tokens orthogonal to the node-level expressiveness
+question studied here. Finally, our pair families are minimum viable
+1-WL tests; a journal version would extend to Cai--F\"urer--Immerman
+constructions over a continuous distribution of 1-WL classes.
+
+\paragraph{Implication for foundation models in optimization.}
+\optfm{}'s headline architectural claim---that multi-view linear attention
+plus edge-weighted cross-attention enhances representational power
+beyond local GNN interaction---is not borne out at the level of expressiveness.
+Any practical gains attributable to \optfm{}'s architecture must therefore
+arise from optimization dynamics, inductive biases for tasks within the 1-WL
+class, or downstream transfer effects, \emph{not} from extra discriminative
+power on bipartite MILPs. Future foundation-model designs targeting
+combinatorial optimization should include positional encodings or random
+features at the input level if expressiveness beyond 1-WL is required.
+
+\begin{thebibliography}{99}\small
+
+\bibitem{gasse2019exact}
+M.~Gasse, D.~Ch\'etelat, N.~Ferroni, L.~Charlin, and A.~Lodi.
+Exact combinatorial optimization with graph convolutional neural networks.
+In \emph{NeurIPS}, 2019.
+
+\bibitem{chen2023expressive}
+Z.~Chen, J.~Liu, X.~Wang, J.~Lu, and W.~Yin.
+On representing mixed-integer linear programs by graph neural networks.
+In \emph{ICLR}, 2023.
+
+\bibitem{yuan2025optfm}
+H.~Yuan, W.~Ouyang, C.~Zhang, C.~Li, and Y.~Sun.
+{OPTFM}: A scalable multi-view graph transformer for hierarchical
+pre-training in combinatorial optimization.
+In \emph{NeurIPS}, 2025.
+
+\bibitem{xu2019powerful}
+K.~Xu, W.~Hu, J.~Leskovec, and S.~Jegelka.
+How powerful are graph neural networks?
+In \emph{ICLR}, 2019.
+
+\bibitem{morris2019wlgo}
+C.~Morris, M.~Ritzert, M.~Fey, W.~L.~Hamilton, J.~E.~Lenssen, G.~Rattan, and M.~Grohe.
+Weisfeiler and {L}eman go neural: Higher-order graph neural networks.
+In \emph{AAAI}, 2019.
+
+\bibitem{wu2023sgformer}
+Q.~Wu, C.~Yang, W.~Zhao, Y.~He, D.~Wipf, and J.~Yan.
+{SGFormer}: Simplifying and empowering transformers for large-graph
+representations.
+In \emph{NeurIPS}, 2023.
+
+\bibitem{dwivedi2022rwpe}
+V.~P.~Dwivedi, C.~K.~Joshi, A.~T.~Luu, T.~Laurent, Y.~Bengio, and X.~Bresson.
+Graph neural networks with learnable structural and positional representations.
+In \emph{ICLR}, 2022.
+
+\bibitem{abboud2020rni}
+R.~Abboud, \.{I}.~\.{I}.~Ceylan, M.~Grohe, and T.~Lukasiewicz.
+The surprising power of graph neural networks with random node initialization.
+In \emph{IJCAI}, 2020.
+
+\bibitem{sato2021random}
+R.~Sato, M.~Yamada, and H.~Kashima.
+Random features strengthen graph neural networks.
+In \emph{SDM}, 2021.
+
+\bibitem{cai1992lower}
+J.-Y. Cai, M.~F\"urer, and N.~Immerman.
+An optimal lower bound on the number of variables for graph identification.
+\emph{Combinatorica}, 12(4):389--410, 1992.
+
+\bibitem{joshi2024}
+C.~K.~Joshi, C.~Bodnar, S.~V.~Mathis, T.~Cohen, and P.~Li\'o.
+On the expressive power of geometric graph neural networks.
+In \emph{ICML}, 2024.
+
+\bibitem{khalil2017learning}
+E.~Khalil, P.~L.~Bodic, L.~Song, G.~Nemhauser, and B.~Dilkina.
+Learning to branch in mixed integer programming.
+In \emph{AAAI}, 2017.
+
+\bibitem{gupta2020hybrid}
+P.~Gupta, M.~Gasse, E.~Khalil, P.~Mudigonda, A.~Lodi, and Y.~Bengio.
+Hybrid models for learning to branch.
+In \emph{NeurIPS}, 2020.
+
+\end{thebibliography}
+
+\appendix
+
+\section{The deprecated ``canonical 1-WL pair''}
+\label{app:broken-canonical}
+
+The ``canonical 1-WL pair'' on 6 variables and 5 constraints, adapted
+from~\cite{chen2023expressive} in earlier probing code (\texttt{data/milp\_pairs.construct\_canonical\_pair}),
+turns out to be \emph{graph-isomorphic} as a feature-labeled bipartite
+graph, not 1-WL equivalent non-isomorphic. We document the diagnosis
+(\texttt{scripts/sanity\_check\_pairs.py}):
+\begin{itemize}[leftmargin=18pt, topsep=0pt, itemsep=1pt]
+    \item MILP-A is feasible at $(1,0,0,1,0,1)$.
+    \item MILP-B---which the original docstring claims is infeasible---is
+    feasible at $(1,0,1,0,0,1)$ as found by \texttt{scipy.milp}. \emph{Both}
+    MILPs are feasible.
+    \item Brute-force permutation search produces an explicit isomorphism:
+    constraint permutation $\pi=(0,1,2,4,3)$ and variable permutation
+    $\sigma=(1,0,3,2,5,4)$ give $A[\pi,\sigma]=A$ and $b_A[\pi]=b_B$.
+\end{itemize}
+Any permutation-equivariant model trivially maps isomorphic inputs to
+identical embeddings. The $\overline{\cos}\!=\!1.0$ result on this pair
+from any GNN is therefore expected and uninformative as evidence of 1-WL
+boundedness. This finding is the reason for constructing the corrected
+pair families of \Cref{sec:setup}.
+
+\section{Reproducibility}
+\label{app:repro}
+
+\paragraph{Environment.}
+Windows 11 Pro 10.0.26200, bash via Git Bash; Python 3.14.2 in a venv;
+\texttt{torch 2.11.0+cpu}, \texttt{numpy 2.4.4}, \texttt{scipy 1.17.1},
+\texttt{matplotlib 3.10.8}, \texttt{networkx 3.6.1}. Working directory:
+\texttt{d:/GitHub/optfm\_probing/}. The pretrained \optfm{} checkpoint is
+read from \texttt{D:/GitHub/OPTFM/node\_pretrain/Models\_SCIP/model\_params\_epoch\_31.pth};
+update \texttt{CKPT} constants if cloning OPTFM elsewhere. Set
+\texttt{PYTHONUTF8=1} to handle the \checkmark and $\times$ characters
+emitted by scripts.
+
+\paragraph{Commands.}
+\begin{lstlisting}[language=bash]
+# 1. verify checkpoint loads with strict=True
+PYTHONUTF8=1 python scripts/verify_weights.py
+
+# 2. diagnose the deprecated canonical pair
+PYTHONUTF8=1 python scripts/sanity_check_pairs.py
+
+# 3. main 6 x 8 grid on Family I + Family II
+PYTHONUTF8=1 python scripts/run_main_experiment.py \
+    --k_values 2 3 4 5 6 7 8 9 10 12 15 20 25 30 \
+    --rnf_samples 30 --family both
+
+# 4. structural / primal-dual probe battery
+PYTHONUTF8=1 python scripts/probe_primal_dual.py \
+    --n_random 800 --k_values 2 3 4 5 6 7 8 9 10 12 15 20 25 30 \
+    --n_objectives 15 --n_seeds 5
+
+# 5. supervised fine-tune (Section 5.2 / Figure 5)
+PYTHONUTF8=1 python scripts/finetune_pair_classifier.py \
+    --epochs 300 --lr 1e-3 --seeds 0 1 2
+
+# 6. regenerate figures
+PYTHONUTF8=1 python visualization/generate_all.py
+\end{lstlisting}
+
+\paragraph{Outputs.}
+\texttt{results/main/<ts>/\{results.json, summary.csv, report.txt\}}
+(main grid);
+\texttt{results/probes/<ts>/\{results.json, report.txt\}} (probe battery);
+\texttt{results/finetune/<ts>/results.json} (training plateau);
+\texttt{results/figures/fig\{1..5\}.\{pdf,png\}} (\Cref{fig:families,fig:main,fig:probes,fig:layerwise,fig:plateau}).
+
+\paragraph{Repository layout.}
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize]
+optfm_probing/
+|-- paper/{proof_sketch.md, FINAL_REPORT.md}
+|-- models/{sgformer_mip.py, optfm_hierarchical.py}
+|-- data/{milp_pairs.py [DEPRECATED], milp_pairs_v2.py}
+|-- scripts/
+|   |-- verify_weights.py            checkpoint integrity
+|   |-- sanity_check_pairs.py        diagnoses the broken canonical pair
+|   |-- run_main_experiment.py       6 x 8 main grid (Section 5)
+|   |-- probe_primal_dual.py         probe battery (Section 6)
+|   |-- finetune_pair_classifier.py  supervised plateau (Section 5.2)
+|   |-- improvements.py              input transforms (RNF/LP/RWPE/VGN)
+|   |-- _tee_log.py                  stdout tee
+|-- visualization/
+|   |-- neurips_style.py             matplotlib rcParams
+|   |-- fig{1..5}_*.py               per-figure scripts
+|   |-- generate_all.py              regenerates results/figures/
+|-- results/{main, probes, finetune, figures, logs}/
+|-- Project_Proposal.tex             this document
+\end{lstlisting}
+
+\end{document}

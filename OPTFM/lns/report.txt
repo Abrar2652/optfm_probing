@@ -1,0 +1,57 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'ddpg_old/ddpg_learner.py'
+ outputting to 'ddpg/ddpg_learner.py'
+--------------------------------------------------------------------------------
+
+32:8: INFO: Added keywords to args of function 'tf.reduce_mean'
+34:11: INFO: Added keywords to args of function 'tf.reduce_mean'
+43:28: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+44:28: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+58:27: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+58:58: INFO: Renamed 'tf.random_normal' to 'tf.random.normal'
+58:75: INFO: Added keywords to args of function 'tf.shape'
+61:27: INFO: Renamed 'tf.assign' to 'tf.compat.v1.assign'
+85:20: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+86:20: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+88:29: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+89:28: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+91:20: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+93:22: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+94:22: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+96:28: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+97:27: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+99:28: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+100:27: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+102:28: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+104:26: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+105:23: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+106:23: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+107:29: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+108:34: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+109:28: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+111:18: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+142:17: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+207:48: INFO: Added keywords to args of function 'tf.reduce_mean'
+226:27: INFO: Added keywords to args of function 'tf.reduce_mean'
+226:42: INFO: Added keywords to args of function 'tf.reduce_mean'
+241:27: INFO: Added keywords to args of function 'tf.reduce_mean'
+262:23: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+264:24: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+287:20: INFO: Added keywords to args of function 'tf.reduce_mean'
+287:55: INFO: Added keywords to args of function 'tf.reduce_mean'
+290:16: INFO: Added keywords to args of function 'tf.reduce_mean'
+295:16: INFO: Added keywords to args of function 'tf.reduce_mean'
+300:16: INFO: Added keywords to args of function 'tf.reduce_mean'
+306:20: INFO: Added keywords to args of function 'tf.reduce_mean'
+447:22: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+--------------------------------------------------------------------------------
+

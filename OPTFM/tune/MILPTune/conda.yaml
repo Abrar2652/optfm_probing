@@ -1,0 +1,30 @@
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+  - nvidia
+  - pyg
+
+dependencies:
+  - python=3.9
+  - scip=7.0.3
+  - ecole=0.7.3
+  - numpy
+  - pyscipopt
+  - libcusparse
+  - scipy
+  - joblib
+  - ConfigSpace
+  - filelock
+  - pytorch
+
+  - pip
+  - pip:
+    - python-dotenv
+    - pymongo
+    - pytorch_metric_learning
+    - matplotlib
+    - smac
+    - torch-scatter -f https://data.pyg.org/whl/torch-1.11.0+cu113.html
+    - torch-sparse -f https://data.pyg.org/whl/torch-1.11.0+cu113.html
+    - torch-geometric

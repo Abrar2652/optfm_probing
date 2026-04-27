@@ -137,10 +137,11 @@ optfm_probing/
 │   ├── fig4_layerwise.py         ← Fig 4: per-sub-layer cos_sim trajectory
 │   ├── fig5_training_plateau.py  ← Fig 5: CE loss plateaus at ln 2 under training
 │   └── generate_all.py           ← regenerate every figure
-└── results/
-    ├── main/<timestamp>/         ← main experiment outputs
-    ├── probes/<timestamp>/       ← probe battery outputs
-    └── figures/                  ← NeurIPS-style PDFs + PNGs for the paper
+├── results/
+│   ├── main/<timestamp>/         ← main experiment outputs
+│   ├── probes/<timestamp>/       ← probe battery outputs
+│   └── figures/                  ← NeurIPS-style PDFs + PNGs for the paper
+└── OPTFM/
 ```
 
 ### Regenerating the paper figures
