@@ -1,0 +1,119 @@
+==============================================================================
+OPTFM 1-WL BOUNDEDNESS EXPERIMENT — MAIN REPORT
+==============================================================================
+Generated: 2026-04-10 20:05:25
+
+Pairs: 1-WL equivalent non-isomorphic bipartite MILP pairs
+       Family selection: --family both
+       Total pairs: 15
+       Family I (2-regular cycles): C_{4k} bipartite vs k*C_4, k in [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20, 25, 30]
+       Family II (3-regular cubic): connected 6+6 cubic vs 2*K_{3,3}
+
+Every pair verified:
+       1-WL equivalent:          True
+       NOT graph-isomorphic:     True
+       Different #components:    True
+
+Pair breakdown:
+   1-WL equivalent non-iso pair: C_8 vs 2*C_4 (k=2)  shape=(4, 4)  A_comp=1  B_comp=2
+   1-WL equivalent non-iso pair: C_12 vs 3*C_4 (k=3)  shape=(6, 6)  A_comp=1  B_comp=3
+   1-WL equivalent non-iso pair: C_16 vs 4*C_4 (k=4)  shape=(8, 8)  A_comp=1  B_comp=4
+   1-WL equivalent non-iso pair: C_20 vs 5*C_4 (k=5)  shape=(10, 10)  A_comp=1  B_comp=5
+   1-WL equivalent non-iso pair: C_24 vs 6*C_4 (k=6)  shape=(12, 12)  A_comp=1  B_comp=6
+   1-WL equivalent non-iso pair: C_28 vs 7*C_4 (k=7)  shape=(14, 14)  A_comp=1  B_comp=7
+   1-WL equivalent non-iso pair: C_32 vs 8*C_4 (k=8)  shape=(16, 16)  A_comp=1  B_comp=8
+   1-WL equivalent non-iso pair: C_36 vs 9*C_4 (k=9)  shape=(18, 18)  A_comp=1  B_comp=9
+   1-WL equivalent non-iso pair: C_40 vs 10*C_4 (k=10)  shape=(20, 20)  A_comp=1  B_comp=10
+   1-WL equivalent non-iso pair: C_48 vs 12*C_4 (k=12)  shape=(24, 24)  A_comp=1  B_comp=12
+   1-WL equivalent non-iso pair: C_60 vs 15*C_4 (k=15)  shape=(30, 30)  A_comp=1  B_comp=15
+   1-WL equivalent non-iso pair: C_80 vs 20*C_4 (k=20)  shape=(40, 40)  A_comp=1  B_comp=20
+   1-WL equivalent non-iso pair: C_100 vs 25*C_4 (k=25)  shape=(50, 50)  A_comp=1  B_comp=25
+   1-WL equivalent non-iso pair: C_120 vs 30*C_4 (k=30)  shape=(60, 60)  A_comp=1  B_comp=30
+   Cubic bipartite 1-WL pair: connected vs 2*K_{3,3}  shape=(6, 6)  A_comp=1  B_comp=2
+
+==============================================================================
+BASELINE: each architecture on unmodified inputs
+==============================================================================
+
+model                                   mean cos    95% CI lo    95% CI hi    exact %
+SGFormer+GCN (pretrained)               1.000000     1.000000     1.000000      100.0
+SGFormer+GCN (random)                   1.000000     1.000000     1.000000      100.0
+TransConv only (random)                 1.000000     1.000000     1.000000      100.0
+GNN only (random)                       1.000000     1.000000     1.000000      100.0
+Simple GCN (random)                     1.000000     1.000000     1.000000      100.0
+Hierarchical OPTFM (random)             1.000000     1.000000     1.000000      100.0
+
+INTERPRETATION: every architecture produces cos_sim = 1.0 on every pair.
+This is the 1-WL boundedness barrier. It holds even for the full
+hierarchical OPTFM with cross-attention, which the paper claims
+`enhances representational power`.
+
+==============================================================================
+IMPROVEMENTS: does a non-trivial input transform escape the limit?
+==============================================================================
+
+
+--- transform: rnf_sigma_0.3 ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               0.999956        0.0
+SGFormer+GCN (random)                   0.999653        0.0
+TransConv only (random)                 0.997952        0.0
+GNN only (random)                       0.999999        0.0
+Simple GCN (random)                     0.999735        0.0
+Hierarchical OPTFM (random)             0.997846        0.0
+
+--- transform: rnf_sigma_1.0 ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               0.999707        0.0
+SGFormer+GCN (random)                   0.997751        0.0
+TransConv only (random)                 0.989620        0.0
+GNN only (random)                       0.999987        0.0
+Simple GCN (random)                     0.997768        0.0
+Hierarchical OPTFM (random)             0.992886        0.0
+
+--- transform: lp_primal ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               1.000000       93.3
+SGFormer+GCN (random)                   0.999997       93.3
+TransConv only (random)                 0.999920       93.3
+GNN only (random)                       1.000000       93.3
+Simple GCN (random)                     1.000000      100.0
+Hierarchical OPTFM (random)             0.999994       93.3
+
+--- transform: lp_reduced ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               0.999983        0.0
+SGFormer+GCN (random)                   0.998686        0.0
+TransConv only (random)                 0.989612        0.0
+GNN only (random)                       0.999995        0.0
+Simple GCN (random)                     0.996654        0.0
+Hierarchical OPTFM (random)             0.982354        0.0
+
+--- transform: lp_primal_dual ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               0.999864        0.0
+SGFormer+GCN (random)                   0.996137        0.0
+TransConv only (random)                 0.991132        0.0
+GNN only (random)                       0.999956        0.0
+Simple GCN (random)                     0.999985       13.3
+Hierarchical OPTFM (random)             0.983672        0.0
+
+--- transform: rwpe_steps_4_6_8 ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               0.999486        0.0
+SGFormer+GCN (random)                   0.998728        0.0
+TransConv only (random)                 0.994253        0.0
+GNN only (random)                       0.999994        0.0
+Simple GCN (random)                     0.994561        0.0
+Hierarchical OPTFM (random)             0.994022        0.0
+
+--- transform: virtual_global_node ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               1.000000      100.0
+SGFormer+GCN (random)                   1.000000      100.0
+TransConv only (random)                 1.000000      100.0
+GNN only (random)                       1.000000      100.0
+Simple GCN (random)                     1.000000      100.0
+Hierarchical OPTFM (random)             1.000000      100.0
+
+==============================================================================

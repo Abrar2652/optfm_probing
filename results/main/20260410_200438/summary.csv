@@ -1,0 +1,49 @@
+model,transform,mean,lo,hi,exact_frac,n_pairs
+"SGFormer+GCN (pretrained)","baseline",1.000000,1.000000,1.000000,1.0000,15
+"SGFormer+GCN (pretrained)","rnf_sigma_0.3",0.999956,0.999936,0.999973,0.0000,15
+"SGFormer+GCN (pretrained)","rnf_sigma_1.0",0.999707,0.999564,0.999818,0.0000,15
+"SGFormer+GCN (pretrained)","lp_primal",1.000000,1.000000,1.000000,0.9333,15
+"SGFormer+GCN (pretrained)","lp_reduced",0.999983,0.999976,0.999989,0.0000,15
+"SGFormer+GCN (pretrained)","lp_primal_dual",0.999864,0.999722,0.999972,0.0000,15
+"SGFormer+GCN (pretrained)","rwpe_steps_4_6_8",0.999486,0.999458,0.999537,0.0000,15
+"SGFormer+GCN (pretrained)","virtual_global_node",1.000000,1.000000,1.000000,1.0000,15
+"SGFormer+GCN (random)","baseline",1.000000,1.000000,1.000000,1.0000,15
+"SGFormer+GCN (random)","rnf_sigma_0.3",0.999653,0.999492,0.999784,0.0000,15
+"SGFormer+GCN (random)","rnf_sigma_1.0",0.997751,0.996705,0.998592,0.0000,15
+"SGFormer+GCN (random)","lp_primal",0.999997,0.999991,1.000000,0.9333,15
+"SGFormer+GCN (random)","lp_reduced",0.998686,0.997833,0.999248,0.0000,15
+"SGFormer+GCN (random)","lp_primal_dual",0.996137,0.993654,0.998370,0.0000,15
+"SGFormer+GCN (random)","rwpe_steps_4_6_8",0.998728,0.998710,0.998762,0.0000,15
+"SGFormer+GCN (random)","virtual_global_node",1.000000,1.000000,1.000000,1.0000,15
+"TransConv only (random)","baseline",1.000000,1.000000,1.000000,1.0000,15
+"TransConv only (random)","rnf_sigma_0.3",0.997952,0.997111,0.998648,0.0000,15
+"TransConv only (random)","rnf_sigma_1.0",0.989620,0.985389,0.993085,0.0000,15
+"TransConv only (random)","lp_primal",0.999920,0.999760,1.000000,0.9333,15
+"TransConv only (random)","lp_reduced",0.989612,0.983413,0.993781,0.0000,15
+"TransConv only (random)","lp_primal_dual",0.991132,0.988778,0.993885,0.0000,15
+"TransConv only (random)","rwpe_steps_4_6_8",0.994253,0.994210,0.994326,0.0000,15
+"TransConv only (random)","virtual_global_node",1.000000,1.000000,1.000000,1.0000,15
+"GNN only (random)","baseline",1.000000,1.000000,1.000000,1.0000,15
+"GNN only (random)","rnf_sigma_0.3",0.999999,0.999999,1.000000,0.0000,15
+"GNN only (random)","rnf_sigma_1.0",0.999987,0.999980,0.999991,0.0000,15
+"GNN only (random)","lp_primal",1.000000,1.000000,1.000000,0.9333,15
+"GNN only (random)","lp_reduced",0.999995,0.999988,0.999998,0.0000,15
+"GNN only (random)","lp_primal_dual",0.999956,0.999909,0.999992,0.0000,15
+"GNN only (random)","rwpe_steps_4_6_8",0.999994,0.999993,0.999994,0.0000,15
+"GNN only (random)","virtual_global_node",1.000000,1.000000,1.000000,1.0000,15
+"Simple GCN (random)","baseline",1.000000,1.000000,1.000000,1.0000,15
+"Simple GCN (random)","rnf_sigma_0.3",0.999735,0.999627,0.999829,0.0000,15
+"Simple GCN (random)","rnf_sigma_1.0",0.997768,0.996888,0.998542,0.0000,15
+"Simple GCN (random)","lp_primal",1.000000,1.000000,1.000000,1.0000,15
+"Simple GCN (random)","lp_reduced",0.996654,0.996075,0.997307,0.0000,15
+"Simple GCN (random)","lp_primal_dual",0.999985,0.999962,0.999997,0.1333,15
+"Simple GCN (random)","rwpe_steps_4_6_8",0.994561,0.994442,0.994791,0.0000,15
+"Simple GCN (random)","virtual_global_node",1.000000,1.000000,1.000000,1.0000,15
+"Hierarchical OPTFM (random)","baseline",1.000000,1.000000,1.000000,1.0000,15
+"Hierarchical OPTFM (random)","rnf_sigma_0.3",0.997846,0.997001,0.998539,0.0000,15
+"Hierarchical OPTFM (random)","rnf_sigma_1.0",0.992886,0.990209,0.995092,0.0000,15
+"Hierarchical OPTFM (random)","lp_primal",0.999994,0.999984,1.000000,0.9333,15
+"Hierarchical OPTFM (random)","lp_reduced",0.982354,0.979835,0.985281,0.0000,15
+"Hierarchical OPTFM (random)","lp_primal_dual",0.983672,0.975665,0.991708,0.0000,15
+"Hierarchical OPTFM (random)","rwpe_steps_4_6_8",0.994022,0.993512,0.994296,0.0000,15
+"Hierarchical OPTFM (random)","virtual_global_node",1.000000,1.000000,1.000000,1.0000,15

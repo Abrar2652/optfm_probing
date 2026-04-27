@@ -1,0 +1,12 @@
+# probe_hierarchical_quick run started at 2026-04-10 18:36:34
+[log] mirroring stdout/stderr to results\logs\probe_hierarchical_quick_20260410_183634.log
+Loaded pre-trained weights from D:/GitHub/OPTFM/node_pretrain/Models_SCIP/model_params_epoch_31.pth
+
+model                            k=2      k=3      k=5      k=10     k=20    
+------------------------------------------------------------------------
+SGFormer+GCN (pretrained)        1.000000 1.000000 1.000000 1.000000 1.000000
+SGFormer+GCN (random)            1.000000 1.000000 1.000000 1.000000 1.000000
+TransConv only (random)          1.000000 1.000000 1.000000 1.000000 1.000000
+GNN only (random)                1.000000 1.000000 1.000000 1.000000 1.000000
+Simple GCN (random)              1.000000 1.000000 1.000000 1.000000 1.000000
+Hierarchical OPTFM (random)      1.000000 1.000000 1.000000 1.000000 1.000000

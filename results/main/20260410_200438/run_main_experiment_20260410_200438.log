@@ -1,0 +1,100 @@
+# run_main_experiment run started at 2026-04-10 20:04:38
+[log] mirroring stdout/stderr to results\main\20260410_200438\run_main_experiment_20260410_200438.log
+==============================================================================
+OPTFM 1-WL boundedness — main experiment
+==============================================================================
+Output dir:   results\main\20260410_200438
+k values:     [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20, 25, 30]
+RNF samples:  30
+
+[1/4] generating 1-WL equivalent non-isomorphic pairs...
+  OK. 15 pairs, all verified 1-WL equivalent AND non-isomorphic
+    - 1-WL equivalent non-iso pair: C_8 vs 2*C_4 (k=2)  shape=(4, 4)  A_comp=1  B_comp=2
+    - 1-WL equivalent non-iso pair: C_12 vs 3*C_4 (k=3)  shape=(6, 6)  A_comp=1  B_comp=3
+    - 1-WL equivalent non-iso pair: C_16 vs 4*C_4 (k=4)  shape=(8, 8)  A_comp=1  B_comp=4
+    - 1-WL equivalent non-iso pair: C_20 vs 5*C_4 (k=5)  shape=(10, 10)  A_comp=1  B_comp=5
+    - 1-WL equivalent non-iso pair: C_24 vs 6*C_4 (k=6)  shape=(12, 12)  A_comp=1  B_comp=6
+    - 1-WL equivalent non-iso pair: C_28 vs 7*C_4 (k=7)  shape=(14, 14)  A_comp=1  B_comp=7
+    - 1-WL equivalent non-iso pair: C_32 vs 8*C_4 (k=8)  shape=(16, 16)  A_comp=1  B_comp=8
+    - 1-WL equivalent non-iso pair: C_36 vs 9*C_4 (k=9)  shape=(18, 18)  A_comp=1  B_comp=9
+    - 1-WL equivalent non-iso pair: C_40 vs 10*C_4 (k=10)  shape=(20, 20)  A_comp=1  B_comp=10
+    - 1-WL equivalent non-iso pair: C_48 vs 12*C_4 (k=12)  shape=(24, 24)  A_comp=1  B_comp=12
+    - 1-WL equivalent non-iso pair: C_60 vs 15*C_4 (k=15)  shape=(30, 30)  A_comp=1  B_comp=15
+    - 1-WL equivalent non-iso pair: C_80 vs 20*C_4 (k=20)  shape=(40, 40)  A_comp=1  B_comp=20
+    - 1-WL equivalent non-iso pair: C_100 vs 25*C_4 (k=25)  shape=(50, 50)  A_comp=1  B_comp=25
+    - 1-WL equivalent non-iso pair: C_120 vs 30*C_4 (k=30)  shape=(60, 60)  A_comp=1  B_comp=30
+    - Cubic bipartite 1-WL pair: connected vs 2*K_{3,3}  shape=(6, 6)  A_comp=1  B_comp=2
+
+[2/4] building models...
+Loaded pre-trained weights from D:/GitHub/OPTFM/node_pretrain/Models_SCIP/model_params_epoch_31.pth
+  SGFormer+GCN (pretrained)              6,820 params
+  SGFormer+GCN (random)                  6,820 params
+  TransConv only (random)                1,344 params
+  GNN only (random)                      5,602 params
+  Simple GCN (random)                      736 params
+  Hierarchical OPTFM (random)           10,852 params
+
+[3/4] probing...
+  transform = baseline
+    SGFormer+GCN (pretrained)         mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+    SGFormer+GCN (random)             mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+    TransConv only (random)           mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+    GNN only (random)                 mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+    Simple GCN (random)               mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+    Hierarchical OPTFM (random)       mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+  transform = rnf_sigma_0.3
+    SGFormer+GCN (pretrained)         mean=0.999956  95%CI=[0.999936,0.999973]  exact_frac=0.00
+    SGFormer+GCN (random)             mean=0.999653  95%CI=[0.999492,0.999784]  exact_frac=0.00
+    TransConv only (random)           mean=0.997952  95%CI=[0.997111,0.998648]  exact_frac=0.00
+    GNN only (random)                 mean=0.999999  95%CI=[0.999999,1.000000]  exact_frac=0.00
+    Simple GCN (random)               mean=0.999735  95%CI=[0.999627,0.999829]  exact_frac=0.00
+    Hierarchical OPTFM (random)       mean=0.997846  95%CI=[0.997001,0.998539]  exact_frac=0.00
+  transform = rnf_sigma_1.0
+    SGFormer+GCN (pretrained)         mean=0.999707  95%CI=[0.999564,0.999818]  exact_frac=0.00
+    SGFormer+GCN (random)             mean=0.997751  95%CI=[0.996705,0.998592]  exact_frac=0.00
+    TransConv only (random)           mean=0.989620  95%CI=[0.985389,0.993085]  exact_frac=0.00
+    GNN only (random)                 mean=0.999987  95%CI=[0.999980,0.999991]  exact_frac=0.00
+    Simple GCN (random)               mean=0.997768  95%CI=[0.996888,0.998542]  exact_frac=0.00
+    Hierarchical OPTFM (random)       mean=0.992886  95%CI=[0.990209,0.995092]  exact_frac=0.00
+  transform = lp_primal
+    SGFormer+GCN (pretrained)         mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=0.93
+    SGFormer+GCN (random)             mean=0.999997  95%CI=[0.999991,1.000000]  exact_frac=0.93
+    TransConv only (random)           mean=0.999920  95%CI=[0.999760,1.000000]  exact_frac=0.93
+    GNN only (random)                 mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=0.93
+    Simple GCN (random)               mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+    Hierarchical OPTFM (random)       mean=0.999994  95%CI=[0.999984,1.000000]  exact_frac=0.93
+  transform = lp_reduced
+    SGFormer+GCN (pretrained)         mean=0.999983  95%CI=[0.999976,0.999989]  exact_frac=0.00
+    SGFormer+GCN (random)             mean=0.998686  95%CI=[0.997833,0.999248]  exact_frac=0.00
+    TransConv only (random)           mean=0.989612  95%CI=[0.983413,0.993781]  exact_frac=0.00
+    GNN only (random)                 mean=0.999995  95%CI=[0.999988,0.999998]  exact_frac=0.00
+    Simple GCN (random)               mean=0.996654  95%CI=[0.996075,0.997307]  exact_frac=0.00
+    Hierarchical OPTFM (random)       mean=0.982354  95%CI=[0.979835,0.985281]  exact_frac=0.00
+  transform = lp_primal_dual
+    SGFormer+GCN (pretrained)         mean=0.999864  95%CI=[0.999722,0.999972]  exact_frac=0.00
+    SGFormer+GCN (random)             mean=0.996137  95%CI=[0.993654,0.998370]  exact_frac=0.00
+    TransConv only (random)           mean=0.991132  95%CI=[0.988778,0.993885]  exact_frac=0.00
+    GNN only (random)                 mean=0.999956  95%CI=[0.999909,0.999992]  exact_frac=0.00
+    Simple GCN (random)               mean=0.999985  95%CI=[0.999962,0.999997]  exact_frac=0.13
+    Hierarchical OPTFM (random)       mean=0.983672  95%CI=[0.975665,0.991708]  exact_frac=0.00
+  transform = rwpe_steps_4_6_8
+    SGFormer+GCN (pretrained)         mean=0.999486  95%CI=[0.999458,0.999537]  exact_frac=0.00
+    SGFormer+GCN (random)             mean=0.998728  95%CI=[0.998710,0.998762]  exact_frac=0.00
+    TransConv only (random)           mean=0.994253  95%CI=[0.994210,0.994326]  exact_frac=0.00
+    GNN only (random)                 mean=0.999994  95%CI=[0.999993,0.999994]  exact_frac=0.00
+    Simple GCN (random)               mean=0.994561  95%CI=[0.994442,0.994791]  exact_frac=0.00
+    Hierarchical OPTFM (random)       mean=0.994022  95%CI=[0.993512,0.994296]  exact_frac=0.00
+  transform = virtual_global_node
+    SGFormer+GCN (pretrained)         mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+    SGFormer+GCN (random)             mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+    TransConv only (random)           mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+    GNN only (random)                 mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+    Simple GCN (random)               mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+    Hierarchical OPTFM (random)       mean=1.000000  95%CI=[1.000000,1.000000]  exact_frac=1.00
+
+[4/4] saving results...
+  figures written to results\main\20260410_200438\figures
+
+Report: results\main\20260410_200438\report.txt
+Results: results\main\20260410_200438\results.json
+done.

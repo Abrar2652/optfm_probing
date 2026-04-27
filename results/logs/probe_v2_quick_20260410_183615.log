@@ -1,0 +1,13 @@
+# probe_v2_quick run started at 2026-04-10 18:36:15
+[log] mirroring stdout/stderr to results\logs\probe_v2_quick_20260410_183615.log
+Loaded pre-trained weights from D:/GitHub/OPTFM/node_pretrain/Models_SCIP/model_params_epoch_31.pth
+  k    n  ||e_A|| pre  ||e_B|| pre    cos_pre  exact_pre    cos_rnd  exact_rnd   iso?
+--------------------------------------------------------------------------------------------------
+  2    4       4.6504       4.6504   1.000000       True   1.000000       True  False
+  3    6       4.6470       4.6470   1.000000       True   1.000000       True  False
+  4    8       4.6452       4.6452   1.000000       True   1.000000       True  False
+  5   10       4.6442       4.6442   1.000000       True   1.000000       True  False
+  8   16       4.6425       4.6425   1.000000       True   1.000000       True  False
+ 10   20       4.6419       4.6419   1.000000       True   1.000000       True  False
+ 15   30       4.6412       4.6412   1.000000       True   1.000000       True  False
+ 20   40       4.6408       4.6408   1.000000       True   1.000000       True  False

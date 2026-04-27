@@ -1,0 +1,5621 @@
+{
+  "k_values": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    15,
+    20,
+    25,
+    30
+  ],
+  "rnf_samples": 30,
+  "diagnostics": [
+    {
+      "description": "1-WL equivalent non-iso pair: C_8 vs 2*C_4 (k=2)",
+      "shape": [
+        4,
+        4
+      ],
+      "A_nnz": 8,
+      "B_nnz": 8,
+      "A_components": 1,
+      "B_components": 2,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_12 vs 3*C_4 (k=3)",
+      "shape": [
+        6,
+        6
+      ],
+      "A_nnz": 12,
+      "B_nnz": 12,
+      "A_components": 1,
+      "B_components": 3,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_16 vs 4*C_4 (k=4)",
+      "shape": [
+        8,
+        8
+      ],
+      "A_nnz": 16,
+      "B_nnz": 16,
+      "A_components": 1,
+      "B_components": 4,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_20 vs 5*C_4 (k=5)",
+      "shape": [
+        10,
+        10
+      ],
+      "A_nnz": 20,
+      "B_nnz": 20,
+      "A_components": 1,
+      "B_components": 5,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_24 vs 6*C_4 (k=6)",
+      "shape": [
+        12,
+        12
+      ],
+      "A_nnz": 24,
+      "B_nnz": 24,
+      "A_components": 1,
+      "B_components": 6,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_28 vs 7*C_4 (k=7)",
+      "shape": [
+        14,
+        14
+      ],
+      "A_nnz": 28,
+      "B_nnz": 28,
+      "A_components": 1,
+      "B_components": 7,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_32 vs 8*C_4 (k=8)",
+      "shape": [
+        16,
+        16
+      ],
+      "A_nnz": 32,
+      "B_nnz": 32,
+      "A_components": 1,
+      "B_components": 8,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_36 vs 9*C_4 (k=9)",
+      "shape": [
+        18,
+        18
+      ],
+      "A_nnz": 36,
+      "B_nnz": 36,
+      "A_components": 1,
+      "B_components": 9,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_40 vs 10*C_4 (k=10)",
+      "shape": [
+        20,
+        20
+      ],
+      "A_nnz": 40,
+      "B_nnz": 40,
+      "A_components": 1,
+      "B_components": 10,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_48 vs 12*C_4 (k=12)",
+      "shape": [
+        24,
+        24
+      ],
+      "A_nnz": 48,
+      "B_nnz": 48,
+      "A_components": 1,
+      "B_components": 12,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_60 vs 15*C_4 (k=15)",
+      "shape": [
+        30,
+        30
+      ],
+      "A_nnz": 60,
+      "B_nnz": 60,
+      "A_components": 1,
+      "B_components": 15,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_80 vs 20*C_4 (k=20)",
+      "shape": [
+        40,
+        40
+      ],
+      "A_nnz": 80,
+      "B_nnz": 80,
+      "A_components": 1,
+      "B_components": 20,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_100 vs 25*C_4 (k=25)",
+      "shape": [
+        50,
+        50
+      ],
+      "A_nnz": 100,
+      "B_nnz": 100,
+      "A_components": 1,
+      "B_components": 25,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    },
+    {
+      "description": "1-WL equivalent non-iso pair: C_120 vs 30*C_4 (k=30)",
+      "shape": [
+        60,
+        60
+      ],
+      "A_nnz": 120,
+      "B_nnz": 120,
+      "A_components": 1,
+      "B_components": 30,
+      "row_sums_equal": true,
+      "col_sums_equal": true,
+      "is_1wl_equivalent": true,
+      "is_isomorphic": false
+    }
+  ],
+  "results": {
+    "SGFormer+GCN (pretrained)": {
+      "baseline": [
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "rnf_sigma_0.3": [
+        {
+          "mean_cos": 0.9998690644900005,
+          "std_cos": 0.00018942514087734975,
+          "min_cos": 0.9991721510887146,
+          "max_cos": 0.9999989867210388,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999117533365885,
+          "std_cos": 0.00013941073126018036,
+          "min_cos": 0.9993065595626831,
+          "max_cos": 0.9999985098838806,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9999387681484222,
+          "std_cos": 7.91698173870945e-05,
+          "min_cos": 0.9996868968009949,
+          "max_cos": 0.9999992251396179,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9999471962451935,
+          "std_cos": 8.84716065932579e-05,
+          "min_cos": 0.9995424747467041,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9999588966369629,
+          "std_cos": 6.183866199115848e-05,
+          "min_cos": 0.9997168183326721,
+          "max_cos": 0.9999995827674866,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9999705771605174,
+          "std_cos": 3.2627111006222e-05,
+          "min_cos": 0.9998878240585327,
+          "max_cos": 0.9999995827674866,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999732951323191,
+          "std_cos": 3.0144100535834847e-05,
+          "min_cos": 0.9998698830604553,
+          "max_cos": 0.9999987483024597,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9999675075213115,
+          "std_cos": 3.262401207687544e-05,
+          "min_cos": 0.999877393245697,
+          "max_cos": 0.9999991655349731,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9999715189139048,
+          "std_cos": 2.555221336790704e-05,
+          "min_cos": 0.999910295009613,
+          "max_cos": 0.9999974966049194,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999785184860229,
+          "std_cos": 1.9741820189768786e-05,
+          "min_cos": 0.9999117851257324,
+          "max_cos": 0.9999982714653015,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9999830921490988,
+          "std_cos": 1.3629436144440107e-05,
+          "min_cos": 0.9999449849128723,
+          "max_cos": 0.9999982118606567,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9999875704447428,
+          "std_cos": 9.067663488315665e-06,
+          "min_cos": 0.9999644756317139,
+          "max_cos": 0.9999991655349731,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999923348426819,
+          "std_cos": 7.215586419426445e-06,
+          "min_cos": 0.9999741911888123,
+          "max_cos": 0.9999995231628418,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.999992161989212,
+          "std_cos": 8.45472854597947e-06,
+          "min_cos": 0.9999653697013855,
+          "max_cos": 0.9999997615814209,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 30
+        }
+      ],
+      "rnf_sigma_1.0": [
+        {
+          "mean_cos": 0.9990364293257396,
+          "std_cos": 0.000993452320558117,
+          "min_cos": 0.9960537552833557,
+          "max_cos": 0.9999794363975525,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.999422405163447,
+          "std_cos": 0.0006272442527493294,
+          "min_cos": 0.9979138970375061,
+          "max_cos": 0.9999819993972778,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9996358791987101,
+          "std_cos": 0.00035927095292473843,
+          "min_cos": 0.9986560940742493,
+          "max_cos": 0.9999873042106628,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9996634701887767,
+          "std_cos": 0.000451828197797174,
+          "min_cos": 0.9983041286468506,
+          "max_cos": 0.9999898672103882,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9997369170188903,
+          "std_cos": 0.00028953950581103076,
+          "min_cos": 0.9990310072898865,
+          "max_cos": 0.9999886751174927,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9997952242692312,
+          "std_cos": 0.00020573809279191127,
+          "min_cos": 0.9993667006492615,
+          "max_cos": 0.999991238117218,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9998017211755117,
+          "std_cos": 0.00018751827675281076,
+          "min_cos": 0.9993192553520203,
+          "max_cos": 0.9999837279319763,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9997969885667165,
+          "std_cos": 0.00022716725469067785,
+          "min_cos": 0.9990342259407043,
+          "max_cos": 0.9999937415122986,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9998189508914948,
+          "std_cos": 0.00017146804607326267,
+          "min_cos": 0.9994008541107178,
+          "max_cos": 0.9999939799308777,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9998665193716685,
+          "std_cos": 0.00010371214549125412,
+          "min_cos": 0.9996152520179749,
+          "max_cos": 0.999992847442627,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9998932957649231,
+          "std_cos": 9.949944159432871e-05,
+          "min_cos": 0.9995961785316467,
+          "max_cos": 0.9999908804893494,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9999061087767284,
+          "std_cos": 8.99421471917071e-05,
+          "min_cos": 0.9995383620262146,
+          "max_cos": 0.999991238117218,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999402940273285,
+          "std_cos": 6.981891125611983e-05,
+          "min_cos": 0.9997230768203735,
+          "max_cos": 0.9999985098838806,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999424676100414,
+          "std_cos": 6.0312466521666954e-05,
+          "min_cos": 0.9997656941413879,
+          "max_cos": 0.9999979138374329,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 30
+        }
+      ],
+      "lp_primal": [
+        {
+          "mean_cos": 1.000000238418579,
+          "std_cos": 0.0,
+          "min_cos": 1.000000238418579,
+          "max_cos": 1.000000238418579,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999997615814209,
+          "std_cos": 0.0,
+          "min_cos": 0.9999997615814209,
+          "max_cos": 0.9999997615814209,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "lp_reduced": [
+        {
+          "mean_cos": 0.9999995827674866,
+          "std_cos": 0.0,
+          "min_cos": 0.9999995827674866,
+          "max_cos": 0.9999995827674866,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999989867210388,
+          "std_cos": 0.0,
+          "min_cos": 0.9999989867210388,
+          "max_cos": 0.9999989867210388,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9999971389770508,
+          "std_cos": 0.0,
+          "min_cos": 0.9999971389770508,
+          "max_cos": 0.9999971389770508,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9999907612800598,
+          "std_cos": 0.0,
+          "min_cos": 0.9999907612800598,
+          "max_cos": 0.9999907612800598,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9999658465385437,
+          "std_cos": 0.0,
+          "min_cos": 0.9999658465385437,
+          "max_cos": 0.9999658465385437,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9999596476554871,
+          "std_cos": 0.0,
+          "min_cos": 0.9999596476554871,
+          "max_cos": 0.9999596476554871,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999646544456482,
+          "std_cos": 0.0,
+          "min_cos": 0.9999646544456482,
+          "max_cos": 0.9999646544456482,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9999693632125854,
+          "std_cos": 0.0,
+          "min_cos": 0.9999693632125854,
+          "max_cos": 0.9999693632125854,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9999741911888123,
+          "std_cos": 0.0,
+          "min_cos": 0.9999741911888123,
+          "max_cos": 0.9999741911888123,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999810457229614,
+          "std_cos": 0.0,
+          "min_cos": 0.9999810457229614,
+          "max_cos": 0.9999810457229614,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.999987006187439,
+          "std_cos": 0.0,
+          "min_cos": 0.999987006187439,
+          "max_cos": 0.999987006187439,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9999913573265076,
+          "std_cos": 0.0,
+          "min_cos": 0.9999913573265076,
+          "max_cos": 0.9999913573265076,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999933242797852,
+          "std_cos": 0.0,
+          "min_cos": 0.9999933242797852,
+          "max_cos": 0.9999933242797852,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999945759773254,
+          "std_cos": 0.0,
+          "min_cos": 0.9999945759773254,
+          "max_cos": 0.9999945759773254,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "lp_primal_dual": [
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999998211860657,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998211860657,
+          "max_cos": 0.9999998211860657,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9999995231628418,
+          "std_cos": 0.0,
+          "min_cos": 0.9999995231628418,
+          "max_cos": 0.9999995231628418,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9999985694885254,
+          "std_cos": 0.0,
+          "min_cos": 0.9999985694885254,
+          "max_cos": 0.9999985694885254,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9999969601631165,
+          "std_cos": 0.0,
+          "min_cos": 0.9999969601631165,
+          "max_cos": 0.9999969601631165,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9999935626983643,
+          "std_cos": 0.0,
+          "min_cos": 0.9999935626983643,
+          "max_cos": 0.9999935626983643,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999881386756897,
+          "std_cos": 0.0,
+          "min_cos": 0.9999881386756897,
+          "max_cos": 0.9999881386756897,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9999797344207764,
+          "std_cos": 0.0,
+          "min_cos": 0.9999797344207764,
+          "max_cos": 0.9999797344207764,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9999679923057556,
+          "std_cos": 0.0,
+          "min_cos": 0.9999679923057556,
+          "max_cos": 0.9999679923057556,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999348521232605,
+          "std_cos": 0.0,
+          "min_cos": 0.9999348521232605,
+          "max_cos": 0.9999348521232605,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9998624920845032,
+          "std_cos": 0.0,
+          "min_cos": 0.9998624920845032,
+          "max_cos": 0.9998624920845032,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9996841549873352,
+          "std_cos": 0.0,
+          "min_cos": 0.9996841549873352,
+          "max_cos": 0.9996841549873352,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9994350075721741,
+          "std_cos": 0.0,
+          "min_cos": 0.9994350075721741,
+          "max_cos": 0.9994350075721741,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9991214275360107,
+          "std_cos": 0.0,
+          "min_cos": 0.9991214275360107,
+          "max_cos": 0.9991214275360107,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "rwpe_8step": [
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9999997615814209,
+          "std_cos": 0.0,
+          "min_cos": 0.9999997615814209,
+          "max_cos": 0.9999997615814209,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ]
+    },
+    "SGFormer+GCN (random)": {
+      "baseline": [
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999998211860657,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998211860657,
+          "max_cos": 0.9999998211860657,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 1.000000238418579,
+          "std_cos": 0.0,
+          "min_cos": 1.000000238418579,
+          "max_cos": 1.000000238418579,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "rnf_sigma_0.3": [
+        {
+          "mean_cos": 0.9956125219662985,
+          "std_cos": 0.004181022671507093,
+          "min_cos": 0.9830601215362549,
+          "max_cos": 0.9998481273651123,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.996979300181071,
+          "std_cos": 0.002645591898423277,
+          "min_cos": 0.9877304434776306,
+          "max_cos": 0.9997290968894958,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9977249542872111,
+          "std_cos": 0.00213740353455555,
+          "min_cos": 0.9906165599822998,
+          "max_cos": 0.9998462200164795,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9981313784917195,
+          "std_cos": 0.0022191931796939424,
+          "min_cos": 0.9897411465644836,
+          "max_cos": 0.9998308420181274,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9986047168572744,
+          "std_cos": 0.0016610202723863568,
+          "min_cos": 0.9927184581756592,
+          "max_cos": 0.9999845027923584,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9989101548989614,
+          "std_cos": 0.0012551027079842024,
+          "min_cos": 0.9949105381965637,
+          "max_cos": 0.999936044216156,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9989779611428579,
+          "std_cos": 0.0010741799322944452,
+          "min_cos": 0.9962859749794006,
+          "max_cos": 0.9999746084213257,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9989169200261434,
+          "std_cos": 0.0013182789103820898,
+          "min_cos": 0.9942971467971802,
+          "max_cos": 0.9999585151672363,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.999008446931839,
+          "std_cos": 0.0010504945158519444,
+          "min_cos": 0.9959735870361328,
+          "max_cos": 0.9999300837516785,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9993038793404897,
+          "std_cos": 0.0006729578223158196,
+          "min_cos": 0.997281014919281,
+          "max_cos": 0.9999681711196899,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9993502994378408,
+          "std_cos": 0.000577800456975976,
+          "min_cos": 0.9972479343414307,
+          "max_cos": 0.9999634027481079,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9996476590633392,
+          "std_cos": 0.00033550344466404903,
+          "min_cos": 0.9982378482818604,
+          "max_cos": 0.9999809861183167,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9997667173544565,
+          "std_cos": 0.0002483427211431038,
+          "min_cos": 0.9988328218460083,
+          "max_cos": 0.9999740123748779,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.999732623497645,
+          "std_cos": 0.0003521982896537733,
+          "min_cos": 0.9983190894126892,
+          "max_cos": 0.9999808669090271,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 30
+        }
+      ],
+      "rnf_sigma_1.0": [
+        {
+          "mean_cos": 0.9790874977906545,
+          "std_cos": 0.013850751838358462,
+          "min_cos": 0.939018726348877,
+          "max_cos": 0.9970385432243347,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9846057891845703,
+          "std_cos": 0.010861478504735048,
+          "min_cos": 0.9590247869491577,
+          "max_cos": 0.9973524808883667,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.988401488463084,
+          "std_cos": 0.009499477565082884,
+          "min_cos": 0.957590639591217,
+          "max_cos": 0.9990701079368591,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9906334439913432,
+          "std_cos": 0.008531162154179258,
+          "min_cos": 0.9582232236862183,
+          "max_cos": 0.9989997148513794,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9937813480695089,
+          "std_cos": 0.00525214621895052,
+          "min_cos": 0.9791096448898315,
+          "max_cos": 0.9994516372680664,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9948237280050913,
+          "std_cos": 0.004611932065491076,
+          "min_cos": 0.983178973197937,
+          "max_cos": 0.9994066953659058,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9954262495040893,
+          "std_cos": 0.003746613576998498,
+          "min_cos": 0.9866374135017395,
+          "max_cos": 0.9994641542434692,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9954817394415537,
+          "std_cos": 0.004044565547616014,
+          "min_cos": 0.9829020500183105,
+          "max_cos": 0.9992454051971436,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9957678278287252,
+          "std_cos": 0.002948137303399418,
+          "min_cos": 0.9868113994598389,
+          "max_cos": 0.999487042427063,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9963712612787883,
+          "std_cos": 0.002759817941355861,
+          "min_cos": 0.9878116250038147,
+          "max_cos": 0.9996430277824402,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9969122270743053,
+          "std_cos": 0.002222268891004354,
+          "min_cos": 0.9910146594047546,
+          "max_cos": 0.999654233455658,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9980495671431223,
+          "std_cos": 0.0015878222758465006,
+          "min_cos": 0.9920045733451843,
+          "max_cos": 0.9997336864471436,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9986627876758576,
+          "std_cos": 0.00121312265487844,
+          "min_cos": 0.9945271611213684,
+          "max_cos": 0.999722957611084,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9987087329228719,
+          "std_cos": 0.0012117110673937977,
+          "min_cos": 0.9941591620445251,
+          "max_cos": 0.9998036623001099,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 30
+        }
+      ],
+      "lp_primal": [
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9999997615814209,
+          "std_cos": 0.0,
+          "min_cos": 0.9999997615814209,
+          "max_cos": 0.9999997615814209,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "lp_reduced": [
+        {
+          "mean_cos": 0.999609112739563,
+          "std_cos": 0.0,
+          "min_cos": 0.999609112739563,
+          "max_cos": 0.999609112739563,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9983012080192566,
+          "std_cos": 0.0,
+          "min_cos": 0.9983012080192566,
+          "max_cos": 0.9983012080192566,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9973288774490356,
+          "std_cos": 0.0,
+          "min_cos": 0.9973288774490356,
+          "max_cos": 0.9973288774490356,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9968432188034058,
+          "std_cos": 0.0,
+          "min_cos": 0.9968432188034058,
+          "max_cos": 0.9968432188034058,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9965824484825134,
+          "std_cos": 0.0,
+          "min_cos": 0.9965824484825134,
+          "max_cos": 0.9965824484825134,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9964982271194458,
+          "std_cos": 0.0,
+          "min_cos": 0.9964982271194458,
+          "max_cos": 0.9964982271194458,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9964438676834106,
+          "std_cos": 0.0,
+          "min_cos": 0.9964438676834106,
+          "max_cos": 0.9964438676834106,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9964066743850708,
+          "std_cos": 0.0,
+          "min_cos": 0.9964066743850708,
+          "max_cos": 0.9964066743850708,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9963690638542175,
+          "std_cos": 0.0,
+          "min_cos": 0.9963690638542175,
+          "max_cos": 0.9963690638542175,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9963021278381348,
+          "std_cos": 0.0,
+          "min_cos": 0.9963021278381348,
+          "max_cos": 0.9963021278381348,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.996231198310852,
+          "std_cos": 0.0,
+          "min_cos": 0.996231198310852,
+          "max_cos": 0.996231198310852,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9961417317390442,
+          "std_cos": 0.0,
+          "min_cos": 0.9961417317390442,
+          "max_cos": 0.9961417317390442,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9960752129554749,
+          "std_cos": 0.0,
+          "min_cos": 0.9960752129554749,
+          "max_cos": 0.9960752129554749,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9960252046585083,
+          "std_cos": 0.0,
+          "min_cos": 0.9960252046585083,
+          "max_cos": 0.9960252046585083,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "lp_primal_dual": [
+        {
+          "mean_cos": 0.9999935626983643,
+          "std_cos": 0.0,
+          "min_cos": 0.9999935626983643,
+          "max_cos": 0.9999935626983643,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999576807022095,
+          "std_cos": 0.0,
+          "min_cos": 0.9999576807022095,
+          "max_cos": 0.9999576807022095,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9998056888580322,
+          "std_cos": 0.0,
+          "min_cos": 0.9998056888580322,
+          "max_cos": 0.9998056888580322,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.99947190284729,
+          "std_cos": 0.0,
+          "min_cos": 0.99947190284729,
+          "max_cos": 0.99947190284729,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.999017596244812,
+          "std_cos": 0.0,
+          "min_cos": 0.999017596244812,
+          "max_cos": 0.999017596244812,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9982098937034607,
+          "std_cos": 0.0,
+          "min_cos": 0.9982098937034607,
+          "max_cos": 0.9982098937034607,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9967957139015198,
+          "std_cos": 0.0,
+          "min_cos": 0.9967957139015198,
+          "max_cos": 0.9967957139015198,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9948065280914307,
+          "std_cos": 0.0,
+          "min_cos": 0.9948065280914307,
+          "max_cos": 0.9948065280914307,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9927170276641846,
+          "std_cos": 0.0,
+          "min_cos": 0.9927170276641846,
+          "max_cos": 0.9927170276641846,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9888885617256165,
+          "std_cos": 0.0,
+          "min_cos": 0.9888885617256165,
+          "max_cos": 0.9888885617256165,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9852489829063416,
+          "std_cos": 0.0,
+          "min_cos": 0.9852489829063416,
+          "max_cos": 0.9852489829063416,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9845526814460754,
+          "std_cos": 0.0,
+          "min_cos": 0.9845526814460754,
+          "max_cos": 0.9845526814460754,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9861933588981628,
+          "std_cos": 0.0,
+          "min_cos": 0.9861933588981628,
+          "max_cos": 0.9861933588981628,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9875035285949707,
+          "std_cos": 0.0,
+          "min_cos": 0.9875035285949707,
+          "max_cos": 0.9875035285949707,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "rwpe_8step": [
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9999998211860657,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998211860657,
+          "max_cos": 0.9999998211860657,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ]
+    },
+    "TransConv only (random)": {
+      "baseline": [
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9999998211860657,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998211860657,
+          "max_cos": 0.9999998211860657,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "rnf_sigma_0.3": [
+        {
+          "mean_cos": 0.994726292292277,
+          "std_cos": 0.004022634370041113,
+          "min_cos": 0.9853140115737915,
+          "max_cos": 0.999558687210083,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9955978910128276,
+          "std_cos": 0.00440146112375312,
+          "min_cos": 0.9797490835189819,
+          "max_cos": 0.9997411370277405,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9967768967151642,
+          "std_cos": 0.0029394604441194253,
+          "min_cos": 0.9872397780418396,
+          "max_cos": 0.9997363686561584,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9972487171490987,
+          "std_cos": 0.003747099450433204,
+          "min_cos": 0.9822221398353577,
+          "max_cos": 0.999605655670166,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9975465794404348,
+          "std_cos": 0.002254372744571854,
+          "min_cos": 0.9922105669975281,
+          "max_cos": 0.9999416470527649,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9983401278654734,
+          "std_cos": 0.0016848747147252148,
+          "min_cos": 0.993194580078125,
+          "max_cos": 0.9998695850372314,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.998549630244573,
+          "std_cos": 0.0016208053766004343,
+          "min_cos": 0.9923294186592102,
+          "max_cos": 0.9998692870140076,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9988363246122997,
+          "std_cos": 0.0011220840711927609,
+          "min_cos": 0.9944487810134888,
+          "max_cos": 0.999929666519165,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9988572816054027,
+          "std_cos": 0.001031551718803464,
+          "min_cos": 0.9960296154022217,
+          "max_cos": 0.9998432993888855,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.998966642220815,
+          "std_cos": 0.0007901296165347319,
+          "min_cos": 0.9966562390327454,
+          "max_cos": 0.9999204874038696,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9991986811161041,
+          "std_cos": 0.0006516258230957097,
+          "min_cos": 0.9971337914466858,
+          "max_cos": 0.999932587146759,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9994791865348815,
+          "std_cos": 0.00033971848198246997,
+          "min_cos": 0.9987404942512512,
+          "max_cos": 0.9999058246612549,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9995768169562022,
+          "std_cos": 0.00042736579076192173,
+          "min_cos": 0.9980660080909729,
+          "max_cos": 0.9999731183052063,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9996544698874156,
+          "std_cos": 0.00026289736036472894,
+          "min_cos": 0.9990061521530151,
+          "max_cos": 0.9999806880950928,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 30
+        }
+      ],
+      "rnf_sigma_1.0": [
+        {
+          "mean_cos": 0.9675431251525879,
+          "std_cos": 0.02290023590005132,
+          "min_cos": 0.911785364151001,
+          "max_cos": 0.9964027404785156,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9748680770397187,
+          "std_cos": 0.021086259556801063,
+          "min_cos": 0.895673930644989,
+          "max_cos": 0.9957557320594788,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9783496677875518,
+          "std_cos": 0.02013547702690405,
+          "min_cos": 0.8965083956718445,
+          "max_cos": 0.9964339733123779,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9836510578791301,
+          "std_cos": 0.015530603047488463,
+          "min_cos": 0.9304917454719543,
+          "max_cos": 0.997469961643219,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9857030709584554,
+          "std_cos": 0.009946428790029046,
+          "min_cos": 0.9585259556770325,
+          "max_cos": 0.9991190433502197,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9897941470146179,
+          "std_cos": 0.007071928982729163,
+          "min_cos": 0.9675049781799316,
+          "max_cos": 0.9982313513755798,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9909170508384705,
+          "std_cos": 0.008720575253058888,
+          "min_cos": 0.9513439536094666,
+          "max_cos": 0.9989295601844788,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9934751192728678,
+          "std_cos": 0.004932755593296639,
+          "min_cos": 0.9799462556838989,
+          "max_cos": 0.9988393783569336,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9922691643238067,
+          "std_cos": 0.006942724032738835,
+          "min_cos": 0.9729259014129639,
+          "max_cos": 0.9990347027778625,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9935714364051819,
+          "std_cos": 0.00476278882309317,
+          "min_cos": 0.9824491739273071,
+          "max_cos": 0.9995527267456055,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9941022058327993,
+          "std_cos": 0.005248530659574282,
+          "min_cos": 0.9770875573158264,
+          "max_cos": 0.9995090365409851,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9963224192460378,
+          "std_cos": 0.0024439521371003143,
+          "min_cos": 0.9901599287986755,
+          "max_cos": 0.9994194507598877,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9970824698607127,
+          "std_cos": 0.003113350791318763,
+          "min_cos": 0.9873412251472473,
+          "max_cos": 0.9996070265769958,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9977317035198212,
+          "std_cos": 0.001434788715365245,
+          "min_cos": 0.9942286014556885,
+          "max_cos": 0.99968022108078,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 30
+        }
+      ],
+      "lp_primal": [
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "lp_reduced": [
+        {
+          "mean_cos": 0.9995525479316711,
+          "std_cos": 0.0,
+          "min_cos": 0.9995525479316711,
+          "max_cos": 0.9995525479316711,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9987504482269287,
+          "std_cos": 0.0,
+          "min_cos": 0.9987504482269287,
+          "max_cos": 0.9987504482269287,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9976444840431213,
+          "std_cos": 0.0,
+          "min_cos": 0.9976444840431213,
+          "max_cos": 0.9976444840431213,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9965669512748718,
+          "std_cos": 0.0,
+          "min_cos": 0.9965669512748718,
+          "max_cos": 0.9965669512748718,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9957104921340942,
+          "std_cos": 0.0,
+          "min_cos": 0.9957104921340942,
+          "max_cos": 0.9957104921340942,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9950430393218994,
+          "std_cos": 0.0,
+          "min_cos": 0.9950430393218994,
+          "max_cos": 0.9950430393218994,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9945186376571655,
+          "std_cos": 0.0,
+          "min_cos": 0.9945186376571655,
+          "max_cos": 0.9945186376571655,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.994107723236084,
+          "std_cos": 0.0,
+          "min_cos": 0.994107723236084,
+          "max_cos": 0.994107723236084,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9937774538993835,
+          "std_cos": 0.0,
+          "min_cos": 0.9937774538993835,
+          "max_cos": 0.9937774538993835,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9932752847671509,
+          "std_cos": 0.0,
+          "min_cos": 0.9932752847671509,
+          "max_cos": 0.9932752847671509,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9927761554718018,
+          "std_cos": 0.0,
+          "min_cos": 0.9927761554718018,
+          "max_cos": 0.9927761554718018,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9922662973403931,
+          "std_cos": 0.0,
+          "min_cos": 0.9922662973403931,
+          "max_cos": 0.9922662973403931,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9919564723968506,
+          "std_cos": 0.0,
+          "min_cos": 0.9919564723968506,
+          "max_cos": 0.9919564723968506,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9917480945587158,
+          "std_cos": 0.0,
+          "min_cos": 0.9917480945587158,
+          "max_cos": 0.9917480945587158,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "lp_primal_dual": [
+        {
+          "mean_cos": 0.9999909996986389,
+          "std_cos": 0.0,
+          "min_cos": 0.9999909996986389,
+          "max_cos": 0.9999909996986389,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9998776316642761,
+          "std_cos": 0.0,
+          "min_cos": 0.9998776316642761,
+          "max_cos": 0.9998776316642761,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9996086955070496,
+          "std_cos": 0.0,
+          "min_cos": 0.9996086955070496,
+          "max_cos": 0.9996086955070496,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9991327524185181,
+          "std_cos": 0.0,
+          "min_cos": 0.9991327524185181,
+          "max_cos": 0.9991327524185181,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9983456134796143,
+          "std_cos": 0.0,
+          "min_cos": 0.9983456134796143,
+          "max_cos": 0.9983456134796143,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9972240924835205,
+          "std_cos": 0.0,
+          "min_cos": 0.9972240924835205,
+          "max_cos": 0.9972240924835205,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9958122372627258,
+          "std_cos": 0.0,
+          "min_cos": 0.9958122372627258,
+          "max_cos": 0.9958122372627258,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9944880604743958,
+          "std_cos": 0.0,
+          "min_cos": 0.9944880604743958,
+          "max_cos": 0.9944880604743958,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9933942556381226,
+          "std_cos": 0.0,
+          "min_cos": 0.9933942556381226,
+          "max_cos": 0.9933942556381226,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9917668104171753,
+          "std_cos": 0.0,
+          "min_cos": 0.9917668104171753,
+          "max_cos": 0.9917668104171753,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9901009798049927,
+          "std_cos": 0.0,
+          "min_cos": 0.9901009798049927,
+          "max_cos": 0.9901009798049927,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.987612783908844,
+          "std_cos": 0.0,
+          "min_cos": 0.987612783908844,
+          "max_cos": 0.987612783908844,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9858055114746094,
+          "std_cos": 0.0,
+          "min_cos": 0.9858055114746094,
+          "max_cos": 0.9858055114746094,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9845787286758423,
+          "std_cos": 0.0,
+          "min_cos": 0.9845787286758423,
+          "max_cos": 0.9845787286758423,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "rwpe_8step": [
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999998211860657,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998211860657,
+          "max_cos": 0.9999998211860657,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ]
+    },
+    "GNN only (random)": {
+      "baseline": [
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "rnf_sigma_0.3": [
+        {
+          "mean_cos": 0.9999946435292562,
+          "std_cos": 4.700806215449243e-06,
+          "min_cos": 0.9999802708625793,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999952753384908,
+          "std_cos": 4.446787025618367e-06,
+          "min_cos": 0.9999832510948181,
+          "max_cos": 0.9999997019767761,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9999969164530437,
+          "std_cos": 3.5415035979397413e-06,
+          "min_cos": 0.9999855756759644,
+          "max_cos": 0.9999997615814209,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9999973913033803,
+          "std_cos": 2.798148003802857e-06,
+          "min_cos": 0.9999880790710449,
+          "max_cos": 0.9999998211860657,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9999983469645183,
+          "std_cos": 1.7967897912323344e-06,
+          "min_cos": 0.9999924302101135,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9999986032644907,
+          "std_cos": 1.4742710832668891e-06,
+          "min_cos": 0.9999933838844299,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999986549218496,
+          "std_cos": 1.278162585650917e-06,
+          "min_cos": 0.9999943971633911,
+          "max_cos": 1.0,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9999987880388895,
+          "std_cos": 8.27386518689074e-07,
+          "min_cos": 0.9999973177909851,
+          "max_cos": 1.0,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9999990006287892,
+          "std_cos": 9.061321941233905e-07,
+          "min_cos": 0.9999960660934448,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999989807605744,
+          "std_cos": 1.1684486893425164e-06,
+          "min_cos": 0.9999945163726807,
+          "max_cos": 1.0,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.999999217192332,
+          "std_cos": 9.87800012362277e-07,
+          "min_cos": 0.9999954700469971,
+          "max_cos": 1.0,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9999994039535522,
+          "std_cos": 6.901452604617769e-07,
+          "min_cos": 0.9999966621398926,
+          "max_cos": 1.0,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999994993209839,
+          "std_cos": 5.208959454909623e-07,
+          "min_cos": 0.9999977350234985,
+          "max_cos": 1.0,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999995708465577,
+          "std_cos": 3.921846727425779e-07,
+          "min_cos": 0.999998152256012,
+          "max_cos": 1.0,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 30
+        }
+      ],
+      "rnf_sigma_1.0": [
+        {
+          "mean_cos": 0.999921711285909,
+          "std_cos": 7.159695066183313e-05,
+          "min_cos": 0.9997251629829407,
+          "max_cos": 0.999989926815033,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999346474806468,
+          "std_cos": 6.49362786928122e-05,
+          "min_cos": 0.9997075200080872,
+          "max_cos": 0.9999979138374329,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9999558528264364,
+          "std_cos": 4.619083686824723e-05,
+          "min_cos": 0.9998373985290527,
+          "max_cos": 0.9999951124191284,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9999644895394643,
+          "std_cos": 3.4889220201272104e-05,
+          "min_cos": 0.9998723864555359,
+          "max_cos": 0.9999972581863403,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9999746362368266,
+          "std_cos": 2.4879075515604295e-05,
+          "min_cos": 0.9998955130577087,
+          "max_cos": 0.9999985098838806,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9999810119469961,
+          "std_cos": 1.7556151126415702e-05,
+          "min_cos": 0.9999247789382935,
+          "max_cos": 0.9999974966049194,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999826848506927,
+          "std_cos": 1.4160820526338284e-05,
+          "min_cos": 0.9999359250068665,
+          "max_cos": 0.9999986886978149,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9999827742576599,
+          "std_cos": 1.3969994517622072e-05,
+          "min_cos": 0.9999486804008484,
+          "max_cos": 0.9999983310699463,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9999838133653005,
+          "std_cos": 1.4674349484817563e-05,
+          "min_cos": 0.999937891960144,
+          "max_cos": 0.9999985098838806,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999867896238963,
+          "std_cos": 1.7291748046448394e-05,
+          "min_cos": 0.9999087452888489,
+          "max_cos": 0.9999992847442627,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.999989241361618,
+          "std_cos": 1.3334583937411139e-05,
+          "min_cos": 0.9999415874481201,
+          "max_cos": 0.9999998211860657,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9999917924404145,
+          "std_cos": 9.356602267924971e-06,
+          "min_cos": 0.9999527931213379,
+          "max_cos": 0.9999991655349731,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999929706255595,
+          "std_cos": 6.989144394031234e-06,
+          "min_cos": 0.9999703764915466,
+          "max_cos": 0.9999996423721313,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999940276145936,
+          "std_cos": 5.226354234753056e-06,
+          "min_cos": 0.999976634979248,
+          "max_cos": 0.999999463558197,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 30
+        }
+      ],
+      "lp_primal": [
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "lp_reduced": [
+        {
+          "mean_cos": 0.9999996423721313,
+          "std_cos": 0.0,
+          "min_cos": 0.9999996423721313,
+          "max_cos": 0.9999996423721313,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999970197677612,
+          "std_cos": 0.0,
+          "min_cos": 0.9999970197677612,
+          "max_cos": 0.9999970197677612,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9999936819076538,
+          "std_cos": 0.0,
+          "min_cos": 0.9999936819076538,
+          "max_cos": 0.9999936819076538,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9999913573265076,
+          "std_cos": 0.0,
+          "min_cos": 0.9999913573265076,
+          "max_cos": 0.9999913573265076,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9999908208847046,
+          "std_cos": 0.0,
+          "min_cos": 0.9999908208847046,
+          "max_cos": 0.9999908208847046,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.999990701675415,
+          "std_cos": 0.0,
+          "min_cos": 0.999990701675415,
+          "max_cos": 0.999990701675415,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999901056289673,
+          "std_cos": 0.0,
+          "min_cos": 0.9999901056289673,
+          "max_cos": 0.9999901056289673,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.999989926815033,
+          "std_cos": 0.0,
+          "min_cos": 0.999989926815033,
+          "max_cos": 0.999989926815033,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9999896883964539,
+          "std_cos": 0.0,
+          "min_cos": 0.9999896883964539,
+          "max_cos": 0.9999896883964539,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999890923500061,
+          "std_cos": 0.0,
+          "min_cos": 0.9999890923500061,
+          "max_cos": 0.9999890923500061,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9999879598617554,
+          "std_cos": 0.0,
+          "min_cos": 0.9999879598617554,
+          "max_cos": 0.9999879598617554,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9999860525131226,
+          "std_cos": 0.0,
+          "min_cos": 0.9999860525131226,
+          "max_cos": 0.9999860525131226,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999850392341614,
+          "std_cos": 0.0,
+          "min_cos": 0.9999850392341614,
+          "max_cos": 0.9999850392341614,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999845027923584,
+          "std_cos": 0.0,
+          "min_cos": 0.9999845027923584,
+          "max_cos": 0.9999845027923584,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "lp_primal_dual": [
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999996423721313,
+          "std_cos": 0.0,
+          "min_cos": 0.9999996423721313,
+          "max_cos": 0.9999996423721313,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.999998927116394,
+          "std_cos": 0.0,
+          "min_cos": 0.999998927116394,
+          "max_cos": 0.999998927116394,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.999997615814209,
+          "std_cos": 0.0,
+          "min_cos": 0.999997615814209,
+          "max_cos": 0.999997615814209,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9999960660934448,
+          "std_cos": 0.0,
+          "min_cos": 0.9999960660934448,
+          "max_cos": 0.9999960660934448,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9999947547912598,
+          "std_cos": 0.0,
+          "min_cos": 0.9999947547912598,
+          "max_cos": 0.9999947547912598,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.999993085861206,
+          "std_cos": 0.0,
+          "min_cos": 0.999993085861206,
+          "max_cos": 0.999993085861206,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.999990701675415,
+          "std_cos": 0.0,
+          "min_cos": 0.999990701675415,
+          "max_cos": 0.999990701675415,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9999880194664001,
+          "std_cos": 0.0,
+          "min_cos": 0.9999880194664001,
+          "max_cos": 0.9999880194664001,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999815821647644,
+          "std_cos": 0.0,
+          "min_cos": 0.9999815821647644,
+          "max_cos": 0.9999815821647644,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9999701380729675,
+          "std_cos": 0.0,
+          "min_cos": 0.9999701380729675,
+          "max_cos": 0.9999701380729675,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9999493360519409,
+          "std_cos": 0.0,
+          "min_cos": 0.9999493360519409,
+          "max_cos": 0.9999493360519409,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999185800552368,
+          "std_cos": 0.0,
+          "min_cos": 0.9999185800552368,
+          "max_cos": 0.9999185800552368,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9998685717582703,
+          "std_cos": 0.0,
+          "min_cos": 0.9998685717582703,
+          "max_cos": 0.9998685717582703,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "rwpe_8step": [
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ]
+    },
+    "Simple GCN (random)": {
+      "baseline": [
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "rnf_sigma_0.3": [
+        {
+          "mean_cos": 0.9992225964864095,
+          "std_cos": 0.0004769218968887517,
+          "min_cos": 0.9979391694068909,
+          "max_cos": 0.9999277591705322,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9993918339411417,
+          "std_cos": 0.0004878917606714446,
+          "min_cos": 0.9982713460922241,
+          "max_cos": 0.9999691843986511,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9995549658934275,
+          "std_cos": 0.0003409529738934483,
+          "min_cos": 0.9987280964851379,
+          "max_cos": 0.9999387860298157,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9996217668056488,
+          "std_cos": 0.00040264809677820185,
+          "min_cos": 0.9980024099349976,
+          "max_cos": 0.9999817609786987,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9997168083985647,
+          "std_cos": 0.00021130042792772048,
+          "min_cos": 0.9991064667701721,
+          "max_cos": 0.9999908208847046,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9997903188069661,
+          "std_cos": 0.00017737178643439797,
+          "min_cos": 0.9992722272872925,
+          "max_cos": 0.9999625086784363,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9998058577378591,
+          "std_cos": 0.0001326263691419814,
+          "min_cos": 0.9994679689407349,
+          "max_cos": 0.9999718070030212,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9998217741648356,
+          "std_cos": 0.00014615486296981245,
+          "min_cos": 0.9992464184761047,
+          "max_cos": 0.9999943971633911,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9998403052488963,
+          "std_cos": 0.0001206521264275455,
+          "min_cos": 0.9994558691978455,
+          "max_cos": 0.9999741911888123,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9998676558335622,
+          "std_cos": 0.00011208793729332368,
+          "min_cos": 0.9995099306106567,
+          "max_cos": 0.9999938607215881,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9998729507128398,
+          "std_cos": 0.00012218117756510491,
+          "min_cos": 0.9995059967041016,
+          "max_cos": 0.9999881386756897,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9999143779277802,
+          "std_cos": 6.820579885506611e-05,
+          "min_cos": 0.9997338652610779,
+          "max_cos": 0.9999874830245972,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999328792095185,
+          "std_cos": 5.538819325213747e-05,
+          "min_cos": 0.9997720122337341,
+          "max_cos": 0.9999932050704956,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999376932779948,
+          "std_cos": 4.532131795567579e-05,
+          "min_cos": 0.9998228549957275,
+          "max_cos": 0.9999955892562866,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 30
+        }
+      ],
+      "rnf_sigma_1.0": [
+        {
+          "mean_cos": 0.9926026503245036,
+          "std_cos": 0.004506753428986931,
+          "min_cos": 0.9814027547836304,
+          "max_cos": 0.9993930459022522,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9946376383304596,
+          "std_cos": 0.0039888404727033925,
+          "min_cos": 0.9862170219421387,
+          "max_cos": 0.9993916749954224,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9958097795645396,
+          "std_cos": 0.003244444413454968,
+          "min_cos": 0.9868271946907043,
+          "max_cos": 0.999414324760437,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9963134924570719,
+          "std_cos": 0.003544340010501674,
+          "min_cos": 0.984180748462677,
+          "max_cos": 0.9997415542602539,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9973362982273102,
+          "std_cos": 0.0017970599351925245,
+          "min_cos": 0.99280846118927,
+          "max_cos": 0.999794065952301,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9981056233247121,
+          "std_cos": 0.0013812486488451784,
+          "min_cos": 0.9941957592964172,
+          "max_cos": 0.9997578859329224,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9981620947519938,
+          "std_cos": 0.001186326052340751,
+          "min_cos": 0.9945828318595886,
+          "max_cos": 0.9996798038482666,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.998239266872406,
+          "std_cos": 0.001511486666588542,
+          "min_cos": 0.9921347498893738,
+          "max_cos": 0.9998075366020203,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9983253796895345,
+          "std_cos": 0.0011560085656725219,
+          "min_cos": 0.9945926666259766,
+          "max_cos": 0.9997102618217468,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9987682342529297,
+          "std_cos": 0.0009656705570138487,
+          "min_cos": 0.9964733123779297,
+          "max_cos": 0.9997786283493042,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9988834659258524,
+          "std_cos": 0.0009305246525055319,
+          "min_cos": 0.996606171131134,
+          "max_cos": 0.9998893141746521,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.999114720026652,
+          "std_cos": 0.0007941667086477618,
+          "min_cos": 0.9963640570640564,
+          "max_cos": 0.9998029470443726,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9993314305941264,
+          "std_cos": 0.0005523898176025793,
+          "min_cos": 0.9976174235343933,
+          "max_cos": 0.9999562501907349,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9993532955646515,
+          "std_cos": 0.0004428863541300384,
+          "min_cos": 0.9983040690422058,
+          "max_cos": 0.9999096393585205,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 30
+        }
+      ],
+      "lp_primal": [
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "lp_reduced": [
+        {
+          "mean_cos": 0.9999209046363831,
+          "std_cos": 0.0,
+          "min_cos": 0.9999209046363831,
+          "max_cos": 0.9999209046363831,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9998592138290405,
+          "std_cos": 0.0,
+          "min_cos": 0.9998592138290405,
+          "max_cos": 0.9998592138290405,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9998217821121216,
+          "std_cos": 0.0,
+          "min_cos": 0.9998217821121216,
+          "max_cos": 0.9998217821121216,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9997971653938293,
+          "std_cos": 0.0,
+          "min_cos": 0.9997971653938293,
+          "max_cos": 0.9997971653938293,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9997797608375549,
+          "std_cos": 0.0,
+          "min_cos": 0.9997797608375549,
+          "max_cos": 0.9997797608375549,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9997670650482178,
+          "std_cos": 0.0,
+          "min_cos": 0.9997670650482178,
+          "max_cos": 0.9997670650482178,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9997571706771851,
+          "std_cos": 0.0,
+          "min_cos": 0.9997571706771851,
+          "max_cos": 0.9997571706771851,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9997494220733643,
+          "std_cos": 0.0,
+          "min_cos": 0.9997494220733643,
+          "max_cos": 0.9997494220733643,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9997430443763733,
+          "std_cos": 0.0,
+          "min_cos": 0.9997430443763733,
+          "max_cos": 0.9997430443763733,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9997333288192749,
+          "std_cos": 0.0,
+          "min_cos": 0.9997333288192749,
+          "max_cos": 0.9997333288192749,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9997236728668213,
+          "std_cos": 0.0,
+          "min_cos": 0.9997236728668213,
+          "max_cos": 0.9997236728668213,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9997135400772095,
+          "std_cos": 0.0,
+          "min_cos": 0.9997135400772095,
+          "max_cos": 0.9997135400772095,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9997072219848633,
+          "std_cos": 0.0,
+          "min_cos": 0.9997072219848633,
+          "max_cos": 0.9997072219848633,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9997029304504395,
+          "std_cos": 0.0,
+          "min_cos": 0.9997029304504395,
+          "max_cos": 0.9997029304504395,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "lp_primal_dual": [
+        {
+          "mean_cos": 0.9999997615814209,
+          "std_cos": 0.0,
+          "min_cos": 0.9999997615814209,
+          "max_cos": 0.9999997615814209,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9999998211860657,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998211860657,
+          "max_cos": 0.9999998211860657,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9999995827674866,
+          "std_cos": 0.0,
+          "min_cos": 0.9999995827674866,
+          "max_cos": 0.9999995827674866,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9999989867210388,
+          "std_cos": 0.0,
+          "min_cos": 0.9999989867210388,
+          "max_cos": 0.9999989867210388,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.999997615814209,
+          "std_cos": 0.0,
+          "min_cos": 0.999997615814209,
+          "max_cos": 0.999997615814209,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9999958872795105,
+          "std_cos": 0.0,
+          "min_cos": 0.9999958872795105,
+          "max_cos": 0.9999958872795105,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9999943375587463,
+          "std_cos": 0.0,
+          "min_cos": 0.9999943375587463,
+          "max_cos": 0.9999943375587463,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999874830245972,
+          "std_cos": 0.0,
+          "min_cos": 0.9999874830245972,
+          "max_cos": 0.9999874830245972,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9999774098396301,
+          "std_cos": 0.0,
+          "min_cos": 0.9999774098396301,
+          "max_cos": 0.9999774098396301,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9999749660491943,
+          "std_cos": 0.0,
+          "min_cos": 0.9999749660491943,
+          "max_cos": 0.9999749660491943,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999861121177673,
+          "std_cos": 0.0,
+          "min_cos": 0.9999861121177673,
+          "max_cos": 0.9999861121177673,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999921917915344,
+          "std_cos": 0.0,
+          "min_cos": 0.9999921917915344,
+          "max_cos": 0.9999921917915344,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "rwpe_8step": [
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9999998211860657,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998211860657,
+          "max_cos": 0.9999998211860657,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9999998211860657,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998211860657,
+          "max_cos": 0.9999998211860657,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ]
+    },
+    "Hierarchical OPTFM (random)": {
+      "baseline": [
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9999999403953552,
+          "std_cos": 0.0,
+          "min_cos": 0.9999999403953552,
+          "max_cos": 0.9999999403953552,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "rnf_sigma_0.3": [
+        {
+          "mean_cos": 0.9983608106772105,
+          "std_cos": 0.0021271846297525082,
+          "min_cos": 0.9913643598556519,
+          "max_cos": 0.9999442100524902,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9988939007123311,
+          "std_cos": 0.0013068495472416328,
+          "min_cos": 0.9949156045913696,
+          "max_cos": 0.9999303221702576,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9992747883001963,
+          "std_cos": 0.0007593995965697362,
+          "min_cos": 0.9966974854469299,
+          "max_cos": 0.9999569654464722,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9993744234244029,
+          "std_cos": 0.0006648806759993183,
+          "min_cos": 0.9971645474433899,
+          "max_cos": 0.9999594688415527,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9994272033373515,
+          "std_cos": 0.0006054609559982826,
+          "min_cos": 0.9977027177810669,
+          "max_cos": 0.99996018409729,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9995554983615875,
+          "std_cos": 0.00039892050545195875,
+          "min_cos": 0.9981469511985779,
+          "max_cos": 0.9999719858169556,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9996139764785766,
+          "std_cos": 0.00041484174869333877,
+          "min_cos": 0.9978538751602173,
+          "max_cos": 0.9999756813049316,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9996728738149007,
+          "std_cos": 0.00035814362592983975,
+          "min_cos": 0.9982032775878906,
+          "max_cos": 0.9999734163284302,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9996712843577067,
+          "std_cos": 0.0003466954157814213,
+          "min_cos": 0.9982819557189941,
+          "max_cos": 0.999981164932251,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9996918857097625,
+          "std_cos": 0.0003313600641027156,
+          "min_cos": 0.9987261295318604,
+          "max_cos": 0.9999786615371704,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9997248848279318,
+          "std_cos": 0.0003382317213831604,
+          "min_cos": 0.998584508895874,
+          "max_cos": 0.9999948740005493,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9997971336046855,
+          "std_cos": 0.0002038432867694649,
+          "min_cos": 0.99912428855896,
+          "max_cos": 0.9999847412109375,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9998423794905344,
+          "std_cos": 0.00017605769422019774,
+          "min_cos": 0.9992924332618713,
+          "max_cos": 0.9999942183494568,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9998556852340699,
+          "std_cos": 0.00016366914966380416,
+          "min_cos": 0.9993647336959839,
+          "max_cos": 0.9999949336051941,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 30
+        }
+      ],
+      "rnf_sigma_1.0": [
+        {
+          "mean_cos": 0.9934615035851796,
+          "std_cos": 0.004108418856303053,
+          "min_cos": 0.9822819232940674,
+          "max_cos": 0.9989840984344482,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9940530856450399,
+          "std_cos": 0.005844879951185616,
+          "min_cos": 0.9712305068969727,
+          "max_cos": 0.9997169375419617,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9951298038164774,
+          "std_cos": 0.0030503583281170387,
+          "min_cos": 0.9861207008361816,
+          "max_cos": 0.9988174438476562,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.9969543615976969,
+          "std_cos": 0.0020324752109644253,
+          "min_cos": 0.9919906258583069,
+          "max_cos": 0.9993851184844971,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9971636315186818,
+          "std_cos": 0.0023016431872537432,
+          "min_cos": 0.9906659126281738,
+          "max_cos": 0.9995262026786804,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9978958467642466,
+          "std_cos": 0.0016983946784611703,
+          "min_cos": 0.9914774894714355,
+          "max_cos": 0.9994893074035645,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9979713499546051,
+          "std_cos": 0.0013929320960401278,
+          "min_cos": 0.9920403957366943,
+          "max_cos": 0.9995923042297363,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9981629908084869,
+          "std_cos": 0.0013515921729667826,
+          "min_cos": 0.9937658309936523,
+          "max_cos": 0.9997387528419495,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9981551428635915,
+          "std_cos": 0.0016385389993604348,
+          "min_cos": 0.9925225377082825,
+          "max_cos": 0.9997854232788086,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9983141839504241,
+          "std_cos": 0.0013636091006914868,
+          "min_cos": 0.993476390838623,
+          "max_cos": 0.9998141527175903,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9986541132132213,
+          "std_cos": 0.00113103795721573,
+          "min_cos": 0.9951497912406921,
+          "max_cos": 0.9998469352722168,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9988290866216024,
+          "std_cos": 0.000780565756513228,
+          "min_cos": 0.9968034029006958,
+          "max_cos": 0.9997740387916565,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9992048541704813,
+          "std_cos": 0.0008601407747693726,
+          "min_cos": 0.9961376786231995,
+          "max_cos": 0.999927282333374,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9993803103764852,
+          "std_cos": 0.000550732985571908,
+          "min_cos": 0.9979119896888733,
+          "max_cos": 0.999927818775177,
+          "exact_frac": 0.0,
+          "n_samples": 30,
+          "k": 30
+        }
+      ],
+      "lp_primal": [
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "lp_reduced": [
+        {
+          "mean_cos": 0.9959582090377808,
+          "std_cos": 0.0,
+          "min_cos": 0.9959582090377808,
+          "max_cos": 0.9959582090377808,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9955510497093201,
+          "std_cos": 0.0,
+          "min_cos": 0.9955510497093201,
+          "max_cos": 0.9955510497093201,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.996548056602478,
+          "std_cos": 0.0,
+          "min_cos": 0.996548056602478,
+          "max_cos": 0.996548056602478,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.99701988697052,
+          "std_cos": 0.0,
+          "min_cos": 0.99701988697052,
+          "max_cos": 0.99701988697052,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9972411394119263,
+          "std_cos": 0.0,
+          "min_cos": 0.9972411394119263,
+          "max_cos": 0.9972411394119263,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9973673820495605,
+          "std_cos": 0.0,
+          "min_cos": 0.9973673820495605,
+          "max_cos": 0.9973673820495605,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9974410533905029,
+          "std_cos": 0.0,
+          "min_cos": 0.9974410533905029,
+          "max_cos": 0.9974410533905029,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9974865913391113,
+          "std_cos": 0.0,
+          "min_cos": 0.9974865913391113,
+          "max_cos": 0.9974865913391113,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9975157976150513,
+          "std_cos": 0.0,
+          "min_cos": 0.9975157976150513,
+          "max_cos": 0.9975157976150513,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9975466728210449,
+          "std_cos": 0.0,
+          "min_cos": 0.9975466728210449,
+          "max_cos": 0.9975466728210449,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9975608587265015,
+          "std_cos": 0.0,
+          "min_cos": 0.9975608587265015,
+          "max_cos": 0.9975608587265015,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9975600242614746,
+          "std_cos": 0.0,
+          "min_cos": 0.9975600242614746,
+          "max_cos": 0.9975600242614746,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9975513219833374,
+          "std_cos": 0.0,
+          "min_cos": 0.9975513219833374,
+          "max_cos": 0.9975513219833374,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9975439310073853,
+          "std_cos": 0.0,
+          "min_cos": 0.9975439310073853,
+          "max_cos": 0.9975439310073853,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "lp_primal_dual": [
+        {
+          "mean_cos": 0.9999470114707947,
+          "std_cos": 0.0,
+          "min_cos": 0.9999470114707947,
+          "max_cos": 0.9999470114707947,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 0.9992888569831848,
+          "std_cos": 0.0,
+          "min_cos": 0.9992888569831848,
+          "max_cos": 0.9992888569831848,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 0.9967392086982727,
+          "std_cos": 0.0,
+          "min_cos": 0.9967392086982727,
+          "max_cos": 0.9967392086982727,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 0.993443489074707,
+          "std_cos": 0.0,
+          "min_cos": 0.993443489074707,
+          "max_cos": 0.993443489074707,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 0.9921319484710693,
+          "std_cos": 0.0,
+          "min_cos": 0.9921319484710693,
+          "max_cos": 0.9921319484710693,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 0.9936347007751465,
+          "std_cos": 0.0,
+          "min_cos": 0.9936347007751465,
+          "max_cos": 0.9936347007751465,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 0.9937635660171509,
+          "std_cos": 0.0,
+          "min_cos": 0.9937635660171509,
+          "max_cos": 0.9937635660171509,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 0.9907177686691284,
+          "std_cos": 0.0,
+          "min_cos": 0.9907177686691284,
+          "max_cos": 0.9907177686691284,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 0.9854450225830078,
+          "std_cos": 0.0,
+          "min_cos": 0.9854450225830078,
+          "max_cos": 0.9854450225830078,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 0.9724773168563843,
+          "std_cos": 0.0,
+          "min_cos": 0.9724773168563843,
+          "max_cos": 0.9724773168563843,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.957014262676239,
+          "std_cos": 0.0,
+          "min_cos": 0.957014262676239,
+          "max_cos": 0.957014262676239,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9400531649589539,
+          "std_cos": 0.0,
+          "min_cos": 0.9400531649589539,
+          "max_cos": 0.9400531649589539,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 0.9306190013885498,
+          "std_cos": 0.0,
+          "min_cos": 0.9306190013885498,
+          "max_cos": 0.9306190013885498,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 0.9249544143676758,
+          "std_cos": 0.0,
+          "min_cos": 0.9249544143676758,
+          "max_cos": 0.9249544143676758,
+          "exact_frac": 0.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ],
+      "rwpe_8step": [
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 2
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 3
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 4
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 5
+        },
+        {
+          "mean_cos": 1.000000238418579,
+          "std_cos": 0.0,
+          "min_cos": 1.000000238418579,
+          "max_cos": 1.000000238418579,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 6
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 7
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 8
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 9
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 10
+        },
+        {
+          "mean_cos": 1.0000001192092896,
+          "std_cos": 0.0,
+          "min_cos": 1.0000001192092896,
+          "max_cos": 1.0000001192092896,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 12
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 15
+        },
+        {
+          "mean_cos": 0.9999998807907104,
+          "std_cos": 0.0,
+          "min_cos": 0.9999998807907104,
+          "max_cos": 0.9999998807907104,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 20
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 25
+        },
+        {
+          "mean_cos": 1.0,
+          "std_cos": 0.0,
+          "min_cos": 1.0,
+          "max_cos": 1.0,
+          "exact_frac": 1.0,
+          "n_samples": 1,
+          "k": 30
+        }
+      ]
+    }
+  }
+}

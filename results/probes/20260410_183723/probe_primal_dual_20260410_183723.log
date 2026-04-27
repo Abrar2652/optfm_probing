@@ -1,0 +1,49 @@
+# probe_primal_dual run started at 2026-04-10 18:37:23
+[log] mirroring stdout/stderr to results\probes\20260410_183723\probe_primal_dual_20260410_183723.log
+==============================================================================
+STRUCTURAL & PRIMAL-DUAL PROBE BATTERY
+==============================================================================
+
+[1/5] building random-MILP dataset (positive control)...
+  800 random MILPs  (n_cons=10 n_vars=10)
+
+[2/5] building 1-WL equivalent dataset (varying c)...
+  420 instances  k=[2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20, 25, 30]  n_objectives=15
+
+[3/5] computing targets...
+  random  n_components:   range [1.0, 5.0]  mean 1.24
+  random  girth_le_4 rate:0.971
+  random  feasible rate : 0.106
+  random  lp_value range: [-6.773, 4.516]
+  1-WL    n_components:   range [1.0, 30.0]  mean 6.07
+  1-WL    girth_le_4 rate:0.500
+  1-WL    lp_value range: [-29.159, 8.057]
+
+[4/5] extracting embeddings with pretrained OPTFM/SGFormer...
+Loaded pre-trained weights from D:/GitHub/OPTFM/node_pretrain/Models_SCIP/model_params_epoch_31.pth
+  X_rand shape: (800, 16)   X_1wl shape: (420, 16)
+
+[5/5] training probes (averaging over random seeds)...
+
+  -- random dataset --
+     n_components__linear         r2_test_mean=+0.1931 r2_test_std=+0.0706
+     n_components__mlp            r2_test_mean=+0.3959 r2_test_std=+0.1091
+     lp_value__linear             r2_test_mean=-0.0035 r2_test_std=+0.0225
+     lp_value__mlp                r2_test_mean=-0.0166 r2_test_std=+0.0466
+     girth_le_4__linear           acc_test_mean=+0.9733 acc_test_std=+0.0057 majority_rate=+0.9725
+     girth_le_4__mlp              acc_test_mean=+0.9758 acc_test_std=+0.0067 majority_rate=+0.9725
+     feasible__linear             acc_test_mean=+0.8892 acc_test_std=+0.0155 majority_rate=+0.8892
+     feasible__mlp                acc_test_mean=+0.8892 acc_test_std=+0.0155 majority_rate=+0.8892
+
+  -- 1-WL equivalent dataset --
+     n_components__linear         r2_test_mean=-0.0123 r2_test_std=+0.0138
+     n_components__mlp            r2_test_mean=-0.0103 r2_test_std=+0.0143
+     lp_value__linear             r2_test_mean=-0.0154 r2_test_std=+0.0103
+     lp_value__mlp                r2_test_mean=-0.0093 r2_test_std=+0.0105
+     girth_le_4__linear           acc_test_mean=+0.4492 acc_test_std=+0.0233 majority_rate=+0.5508
+     girth_le_4__mlp              acc_test_mean=+0.4492 acc_test_std=+0.0233 majority_rate=+0.5508
+     feasible__linear             acc_test_mean=+1.0000 acc_test_std=+0.0000 majority_rate=+1.0000
+     feasible__mlp                acc_test_mean=+1.0000 acc_test_std=+0.0000 majority_rate=+1.0000
+
+results: results\probes\20260410_183723\results.json
+report:  results\probes\20260410_183723\report.txt

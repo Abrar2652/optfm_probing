@@ -1,0 +1,53 @@
+==============================================================================
+PRIMAL-DUAL PROBE BATTERY — REPORT
+==============================================================================
+generated: 2026-04-10 18:12:56
+
+QUESTION: does the pretrained OPTFM embedding implicitly encode
+          primal-dual / Lagrangian information?
+
+Setup: frozen backbone; linear and MLP probes trained from scratch
+       to predict LP relaxation primal/dual/reduced-cost/feasibility
+       targets. 70/30 train/test split.
+
+TWO DATASETS:
+  (a) random bipartite MILPs — positive control; if probes cannot
+      fit here the whole setup is broken.
+  (b) 1-WL equivalent non-isomorphic MILP pairs (C_{4k} vs k*C_4)
+      — the 'hard' case. If the embedding encodes primal-dual info,
+      probes should STILL reach high accuracy here.
+
+==============================================================================
+(a) random MILP dataset — positive control
+==============================================================================
+  obj_values   linear  R²_train=+0.0118  R²_test=-0.0122
+  obj_values   mlp     R²_train=+0.1125  R²_test=-0.1396
+  x_star       linear  R²_train=+0.0154  R²_test=-0.0409
+  x_star       mlp     R²_train=+0.0268  R²_test=-0.0631
+  duals        linear  R²_train=+0.0203  R²_test=-0.0511
+  duals        mlp     R²_train=+0.0939  R²_test=-0.0853
+  reduced      linear  R²_train=+0.0241  R²_test=-0.0418
+  reduced      mlp     R²_train=+0.0892  R²_test=-0.0846
+  feasible     linear  acc_train=1.0000  acc_test=1.0000
+  feasible     mlp     acc_train=1.0000  acc_test=1.0000
+
+==============================================================================
+(b) 1-WL equivalent non-isomorphic MILP dataset
+==============================================================================
+  obj_values   linear  R²_train=+nan  R²_test=+nan
+  obj_values   mlp     R²_train=+nan  R²_test=+nan
+  x_star       linear  R²_train=+0.0020  R²_test=-0.4518
+  x_star       mlp     R²_train=+0.0043  R²_test=-0.4475
+  duals        linear  R²_train=+nan  R²_test=+nan
+  duals        mlp     R²_train=+nan  R²_test=+nan
+  reduced      linear  R²_train=+nan  R²_test=+nan
+  reduced      mlp     R²_train=+nan  R²_test=+nan
+  feasible     linear  acc_train=1.0000  acc_test=1.0000
+  feasible     mlp     acc_train=1.0000  acc_test=1.0000
+
+INTERPRETATION:
+  R² collapse on the 1-WL dataset despite high R² on random MILPs
+  = the embedding does not implicitly encode the target's primal-dual
+    information: within a 1-WL equivalence class the target varies
+    but the embedding does not, so no regressor can do better than
+    predicting the mean (R² ~= 0).

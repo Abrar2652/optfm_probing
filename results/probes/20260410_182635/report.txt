@@ -1,0 +1,67 @@
+==============================================================================
+STRUCTURAL & PRIMAL-DUAL PROBE BATTERY — REPORT
+==============================================================================
+generated: 2026-04-10 18:27:09
+
+Setup: frozen pretrained OPTFM/SGFormer backbone, linear + MLP probes
+       trained on top to predict graph-level targets.
+
+Targets:
+  n_components        regression  (# connected components in bipartite A)
+  lp_value            regression  (LP relaxation objective value w/ c)
+  girth_le_4          binary      (is there a 4-cycle in the bipartite?)
+  feasible            binary      (is the MILP integer feasible?)
+
+Random MILP dataset : 800 samples, shape (10, 10)
+1-WL equivalent set : 420 samples, k in [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20, 25, 30], 15 objectives per k
+
+RANDOM DATASET TARGET STATISTICS:
+  n_components : range [1, 5]  mean 1.24
+  girth_le_4 rate: 0.971
+  feasible rate  : 0.106
+  lp_value range : [-6.773, 4.516]
+
+1-WL DATASET TARGET STATISTICS:
+  n_components : range [1, 30]  mean 6.07
+  girth_le_4 rate: 0.500
+  lp_value range : [-29.159, 8.057]
+
+==============================================================================
+(a) RANDOM MILPS — positive control
+==============================================================================
+  n_components__linear            R²_test = +0.2130 ± 0.0599
+  n_components__mlp               R²_test = +0.3866 ± 0.1029
+  lp_value__linear                R²_test = -0.0053 ± 0.0223
+  lp_value__mlp                   R²_test = -0.0003 ± 0.0176
+  girth_le_4__linear              acc = 0.9725 ± 0.0057  (majority rate = 0.9725)
+  girth_le_4__mlp                 acc = 0.9733 ± 0.0073  (majority rate = 0.9725)
+  feasible__linear                acc = 0.8892 ± 0.0155  (majority rate = 0.8892)
+  feasible__mlp                   acc = 0.8892 ± 0.0155  (majority rate = 0.8892)
+
+==============================================================================
+(b) 1-WL EQUIVALENT NON-ISOMORPHIC MILPS — the target population
+==============================================================================
+  n_components__linear            R²_test = -0.0123 ± 0.0137
+  n_components__mlp               R²_test = -0.0108 ± 0.0139
+  lp_value__linear                R²_test = -0.0152 ± 0.0102
+  lp_value__mlp                   R²_test = -0.0074 ± 0.0148
+  girth_le_4__linear              acc = 0.4492 ± 0.0233  (majority rate = 0.5508)
+  girth_le_4__mlp                 acc = 0.4492 ± 0.0233  (majority rate = 0.5508)
+  feasible__linear                acc = 1.0000 ± 0.0000  (majority rate = 1.0000)
+  feasible__mlp                   acc = 1.0000 ± 0.0000  (majority rate = 1.0000)
+
+==============================================================================
+INTERPRETATION
+==============================================================================
+
+If the pretrained embedding implicitly encodes structural or primal-dual
+information, probes should fit ALL targets on the 1-WL equivalent dataset.
+In particular, n_components varies explicitly between MILP-A (1) and MILP-B
+(= k) within each pair, so a probe that achieves high R² on random MILPs
+should also achieve high R² here — IF the embedding is aware of graph
+structure beyond 1-WL.
+
+Collapsing R² / chance-level accuracy on the 1-WL dataset despite
+non-trivial target variance = the embedding does NOT encode the target,
+which confirms that OPTFM's learned representation is effectively
+1-WL bounded in a probe-detectable sense.

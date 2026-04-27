@@ -1,0 +1,92 @@
+==============================================================================
+OPTFM 1-WL BOUNDEDNESS EXPERIMENT — MAIN REPORT
+==============================================================================
+Generated: 2026-04-10 18:23:42
+
+Pairs: 1-WL equivalent non-isomorphic bipartite MILP pairs
+       G_A = C_{4k} bipartite (connected), G_B = k * C_4 bipartite (k components)
+       k values: [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 20, 25, 30]
+       Total pairs: 14
+
+All pairs verified:
+       1-WL equivalent:          True
+       NOT graph-isomorphic:     True
+       Different #components:    True
+
+==============================================================================
+BASELINE: each architecture on unmodified inputs
+==============================================================================
+
+model                                   mean cos    95% CI lo    95% CI hi    exact %
+SGFormer+GCN (pretrained)               1.000000     1.000000     1.000000      100.0
+SGFormer+GCN (random)                   1.000000     1.000000     1.000000      100.0
+TransConv only (random)                 1.000000     1.000000     1.000000      100.0
+GNN only (random)                       1.000000     1.000000     1.000000      100.0
+Simple GCN (random)                     1.000000     1.000000     1.000000      100.0
+Hierarchical OPTFM (random)             1.000000     1.000000     1.000000      100.0
+
+INTERPRETATION: every architecture produces cos_sim = 1.0 on every pair.
+This is the 1-WL boundedness barrier. It holds even for the full
+hierarchical OPTFM with cross-attention, which the paper claims
+`enhances representational power`.
+
+==============================================================================
+IMPROVEMENTS: does a non-trivial input transform escape the limit?
+==============================================================================
+
+
+--- transform: rnf_sigma_0.3 ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               0.999960        0.0
+SGFormer+GCN (random)                   0.999150        0.0
+TransConv only (random)                 0.997871        0.0
+GNN only (random)                       0.999997        0.0
+Simple GCN (random)                     0.999505        0.0
+Hierarchical OPTFM (random)             0.999260        0.0
+
+--- transform: rnf_sigma_1.0 ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               0.999733        0.0
+SGFormer+GCN (random)                   0.995174        0.0
+TransConv only (random)                 0.989918        0.0
+GNN only (random)                       0.999983        0.0
+Simple GCN (random)                     0.995559        0.0
+Hierarchical OPTFM (random)             0.996676        0.0
+
+--- transform: lp_primal ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               1.000000      100.0
+SGFormer+GCN (random)                   1.000000      100.0
+TransConv only (random)                 1.000000      100.0
+GNN only (random)                       1.000000      100.0
+Simple GCN (random)                     1.000000      100.0
+Hierarchical OPTFM (random)             1.000000      100.0
+
+--- transform: lp_reduced ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               0.999983        0.0
+SGFormer+GCN (random)                   0.993804        0.0
+TransConv only (random)                 0.994565        0.0
+GNN only (random)                       0.999999        0.0
+Simple GCN (random)                     0.999632        0.0
+Hierarchical OPTFM (random)             0.997636        0.0
+
+--- transform: lp_primal_dual ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               0.999854        0.0
+SGFormer+GCN (random)                   0.994719        0.0
+TransConv only (random)                 0.995141        0.0
+GNN only (random)                       0.999975        0.0
+Simple GCN (random)                     0.999999       50.0
+Hierarchical OPTFM (random)             0.984210        0.0
+
+--- transform: rwpe_steps_4_6_8 ---
+model                                   mean cos    exact %
+SGFormer+GCN (pretrained)               0.999460        0.0
+SGFormer+GCN (random)                   0.993559        0.0
+TransConv only (random)                 0.993350        0.0
+GNN only (random)                       0.999991        0.0
+Simple GCN (random)                     0.998022        0.0
+Hierarchical OPTFM (random)             0.998611        0.0
+
+==============================================================================

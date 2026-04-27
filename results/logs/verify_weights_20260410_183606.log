@@ -1,0 +1,80 @@
+# verify_weights run started at 2026-04-10 18:36:06
+[log] mirroring stdout/stderr to results\logs\verify_weights_20260410_183606.log
+
+==============================================================================
+1. CHECKPOINT FILE
+==============================================================================
+Path:    D:\GitHub\OPTFM\node_pretrain\Models_SCIP\model_params_epoch_31.pth
+Exists:  True
+Size:    49,590 bytes
+Type:    OrderedDict
+# keys:  56
+
+==============================================================================
+2. CHECKPOINT KEYS vs MODEL KEYS
+==============================================================================
+Model has 56 keys, checkpoint has 56 keys
+
+Shared keys       : 56
+Missing from ckpt : 0
+Unexpected in ckpt: 0
+
+==============================================================================
+3. SHAPE COMPATIBILITY FOR SHARED KEYS
+==============================================================================
+OK: all 56 shared keys have matching shapes
+
+==============================================================================
+4. STRICT LOAD — MUST SUCCEED
+==============================================================================
+strict=True SUCCEEDED — every model parameter was loaded from ckpt
+
+==============================================================================
+5. PARAMETER-BY-PARAMETER: did values actually change?
+==============================================================================
+load_state_dict(strict=False): missing=0 unexpected=0
+Changed     : 56 / 56
+Unchanged   : 0 / 56
+
+==============================================================================
+6. TENSOR NORM SANITY CHECK ON SELECTED LAYERS
+==============================================================================
+key                                                         ‖ckpt‖   ‖baseline‖  equal?
+var_embedding.weight                                        7.0423       2.3049  False
+cons_embedding.weight                                       2.1862       2.4321  False
+trans_conv.convs.0.Wq.weight                                4.1227       2.3499  False
+trans_conv.convs.0.Wk.weight                                3.8024       2.3697  False
+trans_conv.convs.0.Wv.weight                                4.0487       2.4063  False
+GCN.conv_v_to_c.feature_module_left.0.weight                4.7931       2.3394  False
+GCN.conv_c_to_v.feature_module_left.0.weight                3.7207       2.2732  False
+fc.weight                                                   1.3443       0.8096  False
+
+==============================================================================
+7. END-TO-END: do pretrained vs random models produce DIFFERENT outputs?
+==============================================================================
+Loaded pre-trained weights from D:\GitHub\OPTFM\node_pretrain\Models_SCIP\model_params_epoch_31.pth
+create_model('optfm', ckpt) vs create_model('random')
+   differing params: 56
+   identical params: 0
+
+control-A embedding (pretrained): norm=4.709229
+control-A embedding (random)    : norm=0.707319
+cosine(pre, rnd)                : 0.618600
+bit-identical                   : False
+
+Canonical pair (should be identical within each model):
+   pretrained:  cos(A,B) = 1.000000
+   random    :  cos(A,B) = 1.000000
+Between-model canonical-A comparison (should DIFFER if weights loaded):
+   cos(pretrained_A, random_A) = 0.623586
+   bit-identical               = False
+
+==============================================================================
+VERDICT
+==============================================================================
+[PASS] strict=True load succeeded
+[PASS] loaded params differ from fresh init (56/56 changed)
+[PASS] create_model('optfm', ckpt) differs from create_model('random') (56 params)
+[PASS] pretrained and random models produce different embeddings on control input
+
+>>> VERIFIED: the experiment is using real pre-trained OPTFM weights.

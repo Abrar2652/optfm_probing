@@ -1,0 +1,42 @@
+# sanity_check_pairs run started at 2026-04-10 18:36:07
+[log] mirroring stdout/stderr to results\logs\sanity_check_pairs_20260410_183607.log
+==============================================================================
+SANITY CHECK on existing 'canonical' 1-WL pair in data/milp_pairs.py
+==============================================================================
+
+pair.description           : Canonical 1-WL indistinguishable pair (Chen et al. 2023)
+pair.expected_distinguishable: False
+pair.is_1wl_equivalent      : True
+MILP-A claimed feasible    : True
+MILP-B claimed infeasible  : True
+A matrix:
+[[1. 1. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 0. 0.]
+ [0. 0. 0. 0. 1. 1.]
+ [1. 0. 1. 0. 1. 0.]
+ [0. 1. 0. 1. 0. 1.]]
+b_A = [1. 1. 1. 1. 2.]
+b_B = [1. 1. 1. 2. 1.]
+
+--- 1. Feasibility (ground truth via scipy.milp) ---
+MILP-A feasible? True  solution: [1. 0. 0. 1. 0. 1.]
+MILP-B feasible? True  solution: [1. 0. 1. 0. 0. 1.]
+!! BOTH are feasible. The 'canonical' pair does NOT have the feasibility-differs property claimed in its docstring.
+
+--- 2. 1-WL color refinement ---
+1-WL equivalent? True
+
+--- 3. Graph isomorphism (feature-labeled bipartite) ---
+ISOMORPHIC. constraint permutation pi = (0, 1, 2, 4, 3), variable permutation sigma = (1, 0, 3, 2, 5, 4)
+!! The pair is graph-isomorphic. Any permutation-equivariant model will trivially map them to the same embedding, REGARDLESS of 1-WL expressivity. The 'canonical pair' as currently constructed is uninformative for a 1-WL expressiveness probe.
+
+==============================================================================
+CONCLUSION
+==============================================================================
+The existing probe is UNINFORMATIVE:
+  * Both MILPs are feasible (not A-feasible/B-infeasible as claimed)
+  * They are GRAPH ISOMORPHIC (a strictly stronger property than
+    1-WL equivalence). Equal embeddings are the CORRECT behavior
+    for any GNN, not a 1-WL failure.
+  * To test 1-WL boundedness we need 1-WL equivalent but NON-
+    isomorphic MILP pairs (e.g. Cai-Fürer-Immerman construction).
