@@ -1,0 +1,169 @@
+family,k,model,A_components,B_components,cos_sim,linf,bit_identical
+set_cover,2,"SGFormer+GCN (pretrained)",1,2,1.0000001,0,True
+set_cover,2,"SGFormer+GCN (random)",1,2,1,0,True
+set_cover,2,"TransConv only (random)",1,2,1,0,True
+set_cover,2,"GNN only (random)",1,2,0.99999988,0,True
+set_cover,2,"Simple GCN (random)",1,2,1,0,True
+set_cover,2,"Hierarchical OPTFM (random)",1,2,1,0,True
+set_cover,3,"SGFormer+GCN (pretrained)",1,3,1,1.4901161e-08,True
+set_cover,3,"SGFormer+GCN (random)",1,3,0.99999988,4.6566129e-10,True
+set_cover,3,"TransConv only (random)",1,3,1,0,True
+set_cover,3,"GNN only (random)",1,3,1,2.9802322e-08,True
+set_cover,3,"Simple GCN (random)",1,3,1,1.4901161e-08,True
+set_cover,3,"Hierarchical OPTFM (random)",1,3,1,5.9604645e-08,True
+set_cover,4,"SGFormer+GCN (pretrained)",1,4,0.99999994,0,True
+set_cover,4,"SGFormer+GCN (random)",1,4,1.0000001,0,True
+set_cover,4,"TransConv only (random)",1,4,1,0,True
+set_cover,4,"GNN only (random)",1,4,0.99999988,0,True
+set_cover,4,"Simple GCN (random)",1,4,1,0,True
+set_cover,4,"Hierarchical OPTFM (random)",1,4,0.99999994,0,True
+set_cover,5,"SGFormer+GCN (pretrained)",1,5,0.99999988,0,True
+set_cover,5,"SGFormer+GCN (random)",1,5,1.0000001,3.7252903e-09,True
+set_cover,5,"TransConv only (random)",1,5,1.0000001,0,True
+set_cover,5,"GNN only (random)",1,5,0.99999988,1.4901161e-08,True
+set_cover,5,"Simple GCN (random)",1,5,1,9.3132257e-10,True
+set_cover,5,"Hierarchical OPTFM (random)",1,5,1,5.9604645e-08,True
+set_cover,6,"SGFormer+GCN (pretrained)",1,6,1,0,True
+set_cover,6,"SGFormer+GCN (random)",1,6,1.0000001,0,True
+set_cover,6,"TransConv only (random)",1,6,1.0000001,0,True
+set_cover,6,"GNN only (random)",1,6,0.99999988,0,True
+set_cover,6,"Simple GCN (random)",1,6,0.99999994,0,True
+set_cover,6,"Hierarchical OPTFM (random)",1,6,1.0000001,0,True
+set_cover,8,"SGFormer+GCN (pretrained)",1,8,0.99999994,0,True
+set_cover,8,"SGFormer+GCN (random)",1,8,1,0,True
+set_cover,8,"TransConv only (random)",1,8,0.99999988,0,True
+set_cover,8,"GNN only (random)",1,8,0.99999988,0,True
+set_cover,8,"Simple GCN (random)",1,8,0.99999994,0,True
+set_cover,8,"Hierarchical OPTFM (random)",1,8,0.99999994,0,True
+set_cover,10,"SGFormer+GCN (pretrained)",1,10,1.0000001,0,True
+set_cover,10,"SGFormer+GCN (random)",1,10,1,0,True
+set_cover,10,"TransConv only (random)",1,10,0.99999988,0,True
+set_cover,10,"GNN only (random)",1,10,0.99999994,0,True
+set_cover,10,"Simple GCN (random)",1,10,0.99999994,0,True
+set_cover,10,"Hierarchical OPTFM (random)",1,10,1,0,True
+comb_auction,2,"SGFormer+GCN (pretrained)",1,2,1,0,True
+comb_auction,2,"SGFormer+GCN (random)",1,2,1,0,True
+comb_auction,2,"TransConv only (random)",1,2,1,0,True
+comb_auction,2,"GNN only (random)",1,2,0.99999988,0,True
+comb_auction,2,"Simple GCN (random)",1,2,1,0,True
+comb_auction,2,"Hierarchical OPTFM (random)",1,2,1,0,True
+comb_auction,3,"SGFormer+GCN (pretrained)",1,3,1,0,True
+comb_auction,3,"SGFormer+GCN (random)",1,3,1,7.4505806e-09,True
+comb_auction,3,"TransConv only (random)",1,3,1.0000001,0,True
+comb_auction,3,"GNN only (random)",1,3,0.99999988,7.4505806e-09,True
+comb_auction,3,"Simple GCN (random)",1,3,0.99999994,2.9802322e-08,True
+comb_auction,3,"Hierarchical OPTFM (random)",1,3,1,5.9604645e-08,True
+comb_auction,4,"SGFormer+GCN (pretrained)",1,4,0.99999988,0,True
+comb_auction,4,"SGFormer+GCN (random)",1,4,1,0,True
+comb_auction,4,"TransConv only (random)",1,4,1,0,True
+comb_auction,4,"GNN only (random)",1,4,1,0,True
+comb_auction,4,"Simple GCN (random)",1,4,0.99999988,0,True
+comb_auction,4,"Hierarchical OPTFM (random)",1,4,1.0000001,0,True
+comb_auction,5,"SGFormer+GCN (pretrained)",1,5,1.0000001,0,True
+comb_auction,5,"SGFormer+GCN (random)",1,5,0.99999994,9.3132257e-10,True
+comb_auction,5,"TransConv only (random)",1,5,1,0,True
+comb_auction,5,"GNN only (random)",1,5,1,0,True
+comb_auction,5,"Simple GCN (random)",1,5,1,0,True
+comb_auction,5,"Hierarchical OPTFM (random)",1,5,0.99999994,7.4505806e-09,True
+comb_auction,6,"SGFormer+GCN (pretrained)",1,6,1.0000001,0,True
+comb_auction,6,"SGFormer+GCN (random)",1,6,0.99999988,0,True
+comb_auction,6,"TransConv only (random)",1,6,1,0,True
+comb_auction,6,"GNN only (random)",1,6,0.99999988,0,True
+comb_auction,6,"Simple GCN (random)",1,6,1,0,True
+comb_auction,6,"Hierarchical OPTFM (random)",1,6,1.0000001,0,True
+comb_auction,8,"SGFormer+GCN (pretrained)",1,8,0.99999988,0,True
+comb_auction,8,"SGFormer+GCN (random)",1,8,1,0,True
+comb_auction,8,"TransConv only (random)",1,8,1,0,True
+comb_auction,8,"GNN only (random)",1,8,0.99999994,0,True
+comb_auction,8,"Simple GCN (random)",1,8,0.99999988,0,True
+comb_auction,8,"Hierarchical OPTFM (random)",1,8,0.99999994,0,True
+comb_auction,10,"SGFormer+GCN (pretrained)",1,10,0.99999994,0,True
+comb_auction,10,"SGFormer+GCN (random)",1,10,0.99999994,0,True
+comb_auction,10,"TransConv only (random)",1,10,0.99999994,0,True
+comb_auction,10,"GNN only (random)",1,10,1,0,True
+comb_auction,10,"Simple GCN (random)",1,10,1,0,True
+comb_auction,10,"Hierarchical OPTFM (random)",1,10,1,0,True
+matching,2,"SGFormer+GCN (pretrained)",1,2,0.99999988,0,True
+matching,2,"SGFormer+GCN (random)",1,2,1,0,True
+matching,2,"TransConv only (random)",1,2,1,0,True
+matching,2,"GNN only (random)",1,2,1,0,True
+matching,2,"Simple GCN (random)",1,2,1,1.4901161e-08,True
+matching,2,"Hierarchical OPTFM (random)",1,2,1,0,True
+matching,3,"SGFormer+GCN (pretrained)",1,3,0.99999994,0,True
+matching,3,"SGFormer+GCN (random)",1,3,1.0000001,0,True
+matching,3,"TransConv only (random)",1,3,1,0,True
+matching,3,"GNN only (random)",1,3,1,0,True
+matching,3,"Simple GCN (random)",1,3,1.0000001,0,True
+matching,3,"Hierarchical OPTFM (random)",1,3,0.99999982,0,True
+matching,4,"SGFormer+GCN (pretrained)",1,4,1,0,True
+matching,4,"SGFormer+GCN (random)",1,4,1,0,True
+matching,4,"TransConv only (random)",1,4,0.99999988,0,True
+matching,4,"GNN only (random)",1,4,1,1.4901161e-08,True
+matching,4,"Simple GCN (random)",1,4,1,1.4901161e-08,True
+matching,4,"Hierarchical OPTFM (random)",1,4,0.99999982,5.9604645e-08,True
+matching,5,"SGFormer+GCN (pretrained)",1,5,1,0,True
+matching,5,"SGFormer+GCN (random)",1,5,1,0,True
+matching,5,"TransConv only (random)",1,5,1,0,True
+matching,5,"GNN only (random)",1,5,0.99999994,0,True
+matching,5,"Simple GCN (random)",1,5,1,0,True
+matching,5,"Hierarchical OPTFM (random)",1,5,0.99999994,0,True
+matching,6,"SGFormer+GCN (pretrained)",1,6,1,0,True
+matching,6,"SGFormer+GCN (random)",1,6,1.0000001,0,True
+matching,6,"TransConv only (random)",1,6,0.99999976,0,True
+matching,6,"GNN only (random)",1,6,1,0,True
+matching,6,"Simple GCN (random)",1,6,1,0,True
+matching,6,"Hierarchical OPTFM (random)",1,6,1,0,True
+matching,8,"SGFormer+GCN (pretrained)",1,8,1,0,True
+matching,8,"SGFormer+GCN (random)",1,8,0.99999988,3.7252903e-09,True
+matching,8,"TransConv only (random)",1,8,1.0000001,0,True
+matching,8,"GNN only (random)",1,8,1,0,True
+matching,8,"Simple GCN (random)",1,8,0.99999994,9.3132257e-10,True
+matching,8,"Hierarchical OPTFM (random)",1,8,0.99999988,0,True
+matching,10,"SGFormer+GCN (pretrained)",1,10,1,0,True
+matching,10,"SGFormer+GCN (random)",1,10,1,0,True
+matching,10,"TransConv only (random)",1,10,0.99999988,0,True
+matching,10,"GNN only (random)",1,10,0.99999994,7.4505806e-09,True
+matching,10,"Simple GCN (random)",1,10,1.0000001,1.8626451e-09,True
+matching,10,"Hierarchical OPTFM (random)",1,10,0.99999988,3.7252903e-09,True
+knapsack_blocks,2,"SGFormer+GCN (pretrained)",1,2,1,0,True
+knapsack_blocks,2,"SGFormer+GCN (random)",1,2,1.0000001,1.4901161e-08,True
+knapsack_blocks,2,"TransConv only (random)",1,2,1,0,True
+knapsack_blocks,2,"GNN only (random)",1,2,1,9.3132257e-10,True
+knapsack_blocks,2,"Simple GCN (random)",1,2,0.99999988,0,True
+knapsack_blocks,2,"Hierarchical OPTFM (random)",1,2,1,5.9604645e-08,True
+knapsack_blocks,3,"SGFormer+GCN (pretrained)",1,3,1,0,True
+knapsack_blocks,3,"SGFormer+GCN (random)",1,3,1,0,True
+knapsack_blocks,3,"TransConv only (random)",1,3,1,0,True
+knapsack_blocks,3,"GNN only (random)",1,3,1,0,True
+knapsack_blocks,3,"Simple GCN (random)",1,3,1.0000001,0,True
+knapsack_blocks,3,"Hierarchical OPTFM (random)",1,3,1.0000001,0,True
+knapsack_blocks,4,"SGFormer+GCN (pretrained)",1,4,1,0,True
+knapsack_blocks,4,"SGFormer+GCN (random)",1,4,0.99999988,0,True
+knapsack_blocks,4,"TransConv only (random)",1,4,1.0000001,0,True
+knapsack_blocks,4,"GNN only (random)",1,4,1.0000001,0,True
+knapsack_blocks,4,"Simple GCN (random)",1,4,0.99999994,0,True
+knapsack_blocks,4,"Hierarchical OPTFM (random)",1,4,1.0000001,0,True
+knapsack_blocks,5,"SGFormer+GCN (pretrained)",1,5,1.0000001,0,True
+knapsack_blocks,5,"SGFormer+GCN (random)",1,5,1,7.4505806e-09,True
+knapsack_blocks,5,"TransConv only (random)",1,5,1,0,True
+knapsack_blocks,5,"GNN only (random)",1,5,1,1.4901161e-08,True
+knapsack_blocks,5,"Simple GCN (random)",1,5,1,0,True
+knapsack_blocks,5,"Hierarchical OPTFM (random)",1,5,1.0000001,5.9604645e-08,True
+knapsack_blocks,6,"SGFormer+GCN (pretrained)",1,6,0.99999994,0,True
+knapsack_blocks,6,"SGFormer+GCN (random)",1,6,1,0,True
+knapsack_blocks,6,"TransConv only (random)",1,6,1,0,True
+knapsack_blocks,6,"GNN only (random)",1,6,0.99999994,0,True
+knapsack_blocks,6,"Simple GCN (random)",1,6,0.99999994,0,True
+knapsack_blocks,6,"Hierarchical OPTFM (random)",1,6,1,0,True
+knapsack_blocks,8,"SGFormer+GCN (pretrained)",1,8,1,0,True
+knapsack_blocks,8,"SGFormer+GCN (random)",1,8,1,3.7252903e-09,True
+knapsack_blocks,8,"TransConv only (random)",1,8,1,0,True
+knapsack_blocks,8,"GNN only (random)",1,8,1,0,True
+knapsack_blocks,8,"Simple GCN (random)",1,8,1,0,True
+knapsack_blocks,8,"Hierarchical OPTFM (random)",1,8,1,2.9802322e-08,True
+knapsack_blocks,10,"SGFormer+GCN (pretrained)",1,10,1,0,True
+knapsack_blocks,10,"SGFormer+GCN (random)",1,10,1,2.3283064e-10,True
+knapsack_blocks,10,"TransConv only (random)",1,10,0.99999988,0,True
+knapsack_blocks,10,"GNN only (random)",1,10,0.99999994,0,True
+knapsack_blocks,10,"Simple GCN (random)",1,10,1,0,True
+knapsack_blocks,10,"Hierarchical OPTFM (random)",1,10,0.99999994,0,True

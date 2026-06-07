@@ -1,0 +1,15 @@
+1-WL DIAGNOSTIC REPORT
+============================================================
+verdict: 1-WL BOUNDED (encoder collapses every 1-WL-equivalent pair to a bit-identical embedding)
+exact_frac (bit-identical pairs): 1.000
+mean cos: 1.000000   pairs: 8
+
+pair                                                 cos       linf  identical
+1-WL equivalent non-iso pair: C_8 vs 2*C_4 (k   1.000000   0.00e+00       True
+1-WL equivalent non-iso pair: C_12 vs 3*C_4 (   1.000000   0.00e+00       True
+1-WL equivalent non-iso pair: C_16 vs 4*C_4 (   1.000000   2.98e-08       True
+1-WL equivalent non-iso pair: C_20 vs 5*C_4 (   1.000000   0.00e+00       True
+1-WL equivalent non-iso pair: C_24 vs 6*C_4 (   1.000000   0.00e+00       True
+1-WL equivalent non-iso pair: C_32 vs 8*C_4 (   1.000000   0.00e+00       True
+1-WL equivalent non-iso pair: C_40 vs 10*C_4    1.000000   2.98e-08       True
+Cubic bipartite 1-WL pair: connected vs 2*K_{   1.000000   0.00e+00       True

@@ -1,0 +1,3 @@
+family,n_instances,m,n,frac_with_wl_twins,n_equiv_pairs,n_pairs
+set_cover,300,10,12,0.12,0,150
+comb_auction,300,10,12,0.063333333,0,150

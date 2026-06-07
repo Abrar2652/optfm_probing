@@ -1,0 +1,19 @@
+pair,model,cos_sim,linf,distinguished
+"Distinguishable: chain vs star","SGFormer+GCN (pretrained)",0.99999756,0.013098478,True
+"Distinguishable: chain vs star","SGFormer+GCN (random)",0.99999928,0.00069545209,True
+"Distinguishable: chain vs star","TransConv only (random)",1.0000001,0,False
+"Distinguishable: chain vs star","GNN only (random)",0.99993861,0.0018047169,True
+"Distinguishable: chain vs star","Simple GCN (random)",1.0000001,7.4505806e-09,False
+"Distinguishable: chain vs star","Hierarchical OPTFM (random)",0.99962598,0.020535827,True
+"Distinguishable: 2-regular vs irregular","SGFormer+GCN (pretrained)",0.99820751,0.14604664,True
+"Distinguishable: 2-regular vs irregular","SGFormer+GCN (random)",0.99980748,0.011994064,True
+"Distinguishable: 2-regular vs irregular","TransConv only (random)",0.99985445,0.027690947,True
+"Distinguishable: 2-regular vs irregular","GNN only (random)",0.99994671,0.0025487691,True
+"Distinguishable: 2-regular vs irregular","Simple GCN (random)",0.99997985,0.0029186904,True
+"Distinguishable: 2-regular vs irregular","Hierarchical OPTFM (random)",0.99922824,0.062381417,True
+"Distinguishable: different RHS","SGFormer+GCN (pretrained)",0.99964297,0.12508941,True
+"Distinguishable: different RHS","SGFormer+GCN (random)",0.99731469,0.055433095,True
+"Distinguishable: different RHS","TransConv only (random)",0.99019718,0.20943952,True
+"Distinguishable: different RHS","GNN only (random)",0.99991071,0.0024049878,True
+"Distinguishable: different RHS","Simple GCN (random)",0.9834069,0.058477551,True
+"Distinguishable: different RHS","Hierarchical OPTFM (random)",0.9839946,0.11014283,True

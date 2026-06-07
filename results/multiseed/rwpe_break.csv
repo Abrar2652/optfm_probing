@@ -1,0 +1,7 @@
+model,n_seeds,mean_rwpe_cos,std,ci_lo,ci_hi,baseline_exact_frac
+"SGFormer+GCN (pretrained)",1,0.99948553,0,0.99948553,0.99948553,1
+"SGFormer+GCN (random)",5,0.99857183,0.00064698462,0.99798674,0.99907104,1
+"TransConv only (random)",5,0.99238854,0.0026935199,0.9901982,0.9947446,1
+"GNN only (random)",5,0.99998486,1.115424e-05,0.99997368,0.99999154,1
+"Simple GCN (random)",5,0.99873304,0.00064176098,0.99820804,0.99925511,1
+"Hierarchical OPTFM (random)",5,0.99774086,0.00038761894,0.99742643,0.99807296,1

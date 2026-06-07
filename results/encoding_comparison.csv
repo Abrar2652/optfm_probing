@@ -1,0 +1,31 @@
+encoding,model,mean_cos,exact_frac,note
+baseline,"SGFormer+GCN (pretrained)",1,1,none
+baseline,"SGFormer+GCN (random)",0.99999998,1,none
+baseline,"TransConv only (random)",1,1,none
+baseline,"GNN only (random)",0.99999999,1,none
+baseline,"Simple GCN (random)",0.99999999,1,none
+baseline,"Hierarchical OPTFM (random)",1,1,none
+RNI,"SGFormer+GCN (pretrained)",0.99970778,0,"stochastic; no convergence guarantee"
+RNI,"SGFormer+GCN (random)",0.99726613,0,"stochastic; no convergence guarantee"
+RNI,"TransConv only (random)",0.99498531,0,"stochastic; no convergence guarantee"
+RNI,"GNN only (random)",0.99998442,0,"stochastic; no convergence guarantee"
+RNI,"Simple GCN (random)",0.99718675,0,"stochastic; no convergence guarantee"
+RNI,"Hierarchical OPTFM (random)",0.99773548,0,"stochastic; no convergence guarantee"
+RWPE,"SGFormer+GCN (pretrained)",0.99948553,0,"deterministic; < 2-FWL"
+RWPE,"SGFormer+GCN (random)",0.9989153,0,"deterministic; < 2-FWL"
+RWPE,"TransConv only (random)",0.99684802,0,"deterministic; < 2-FWL"
+RWPE,"GNN only (random)",0.9999907,0,"deterministic; < 2-FWL"
+RWPE,"Simple GCN (random)",0.99846555,0,"deterministic; < 2-FWL"
+RWPE,"Hierarchical OPTFM (random)",0.99737611,0,"deterministic; < 2-FWL"
+LapPE,"SGFormer+GCN (pretrained)",0.99997347,0,"sign/basis ambiguity"
+LapPE,"SGFormer+GCN (random)",0.99958856,0,"sign/basis ambiguity"
+LapPE,"TransConv only (random)",0.9993104,0,"sign/basis ambiguity"
+LapPE,"GNN only (random)",0.99999715,0,"sign/basis ambiguity"
+LapPE,"Simple GCN (random)",0.99970367,0,"sign/basis ambiguity"
+LapPE,"Hierarchical OPTFM (random)",0.99923025,0,"sign/basis ambiguity"
+LP-primal,"SGFormer+GCN (pretrained)",1,0.93333333,"needs an LP solve"
+LP-primal,"SGFormer+GCN (random)",0.99995497,0.93333333,"needs an LP solve"
+LP-primal,"TransConv only (random)",0.99999946,0.93333333,"needs an LP solve"
+LP-primal,"GNN only (random)",0.99999993,0.93333333,"needs an LP solve"
+LP-primal,"Simple GCN (random)",0.99999998,1,"needs an LP solve"
+LP-primal,"Hierarchical OPTFM (random)",0.99999086,0.93333333,"needs an LP solve"

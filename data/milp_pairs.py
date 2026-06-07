@@ -398,34 +398,64 @@ def verify_1wl_equivalence(milp_a: MILPInstance, milp_b: MILPInstance,
     
     For 1-WL equivalent graphs, the multiset of colors at each iteration should be identical.
     """
-    def get_color_histogram(milp: MILPInstance) -> List[Tuple]:
+    # Efficient WL: compress colours to integer ids each round, using a SHARED
+    # signature->id table across both graphs (equivalent to running 1-WL on the
+    # disjoint union). This avoids the exponential nesting of colour tuples and
+    # makes the cost independent of the refinement depth.
+    def init_colors(milp: MILPInstance):
+        n_cons, n_vars = milp.A.shape
+        var = [("v",) + tuple(milp.var_features[j].round(4)) for j in range(n_vars)]
+        cons = [("c",) + tuple(milp.cons_features[i].round(4)) for i in range(n_cons)]
+        return cons, var
+
+    def adj_lists(milp: MILPInstance):
         A = milp.A
         n_cons, n_vars = A.shape
-        
-        # Initialize colors with features
-        var_colors = [tuple(milp.var_features[j].round(4)) for j in range(n_vars)]
-        cons_colors = [tuple(milp.cons_features[i].round(4)) for i in range(n_cons)]
-        
-        # Weisfeiler-Lehman iterations
-        for _ in range(iterations):
-            new_var_colors = []
-            for j in range(n_vars):
-                neighbors = tuple(sorted(cons_colors[i] for i in range(n_cons) if A[i, j] != 0))
-                new_var_colors.append((var_colors[j], neighbors))
-            
-            new_cons_colors = []
-            for i in range(n_cons):
-                neighbors = tuple(sorted(var_colors[j] for j in range(n_vars) if A[i, j] != 0))
-                new_cons_colors.append((cons_colors[i], neighbors))
-            
-            var_colors = new_var_colors
-            cons_colors = new_cons_colors
-        
-        return sorted(var_colors) + sorted(cons_colors)
-    
-    hist_a = get_color_histogram(milp_a)
-    hist_b = get_color_histogram(milp_b)
-    
+        var_nbr = [[i for i in range(n_cons) if A[i, j] != 0] for j in range(n_vars)]
+        cons_nbr = [[j for j in range(n_vars) if A[i, j] != 0] for i in range(n_cons)]
+        return cons_nbr, var_nbr
+
+    consA, varA = init_colors(milp_a)
+    consB, varB = init_colors(milp_b)
+    cnbrA, vnbrA = adj_lists(milp_a)
+    cnbrB, vnbrB = adj_lists(milp_b)
+
+    def compress(signatures):
+        table, out = {}, []
+        for s in signatures:
+            if s not in table:
+                table[s] = len(table)
+            out.append(table[s])
+        return out
+
+    # initial compression over the union
+    def refine_once(consA, varA, consB, varB):
+        # variables: signature = (own colour, sorted neighbour cons colours)
+        sigs = []
+        sigs += [(varA[j], tuple(sorted(consA[i] for i in vnbrA[j]))) for j in range(len(varA))]
+        sigs += [(varB[j], tuple(sorted(consB[i] for i in vnbrB[j]))) for j in range(len(varB))]
+        comp = compress(sigs)
+        nva = comp[:len(varA)]; nvb = comp[len(varA):]
+        # constraints
+        sigs = []
+        sigs += [(consA[i], tuple(sorted(varA[j] for j in cnbrA[i]))) for i in range(len(consA))]
+        sigs += [(consB[i], tuple(sorted(varB[j] for j in cnbrB[i]))) for i in range(len(consB))]
+        comp = compress(sigs)
+        nca = comp[:len(consA)]; ncb = comp[len(consA):]
+        return nca, nva, ncb, nvb
+
+    # compress initial features to ids first
+    all0 = compress(consA + varA + consB + varB)
+    nA, mA = len(consA), len(varA)
+    nB, mB = len(consB), len(varB)
+    consA = all0[:nA]; varA = all0[nA:nA+mA]
+    consB = all0[nA+mA:nA+mA+nB]; varB = all0[nA+mA+nB:]
+
+    for _ in range(iterations):
+        consA, varA, consB, varB = refine_once(consA, varA, consB, varB)
+
+    hist_a = sorted(consA) + sorted(varA)
+    hist_b = sorted(consB) + sorted(varB)
     return hist_a == hist_b
 
 

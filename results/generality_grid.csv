@@ -1,0 +1,9 @@
+model,transform,params,mean_cos,ci_lo,ci_hi,exact_frac
+"Graphormer-style (deg+adj)",baseline,21616,1,1,1,1
+"Graphormer-style (deg+adj)",rwpe,21616,0.99886683,0.9988381,0.99892323,0
+"GraphGPS-style (MPNN+attn)",baseline,21568,1,0.99999998,1,1
+"GraphGPS-style (MPNN+attn)",rwpe,21568,0.99643451,0.99627362,0.99652076,0
+"Set-Transformer pooling",baseline,13216,0.99999998,0.99999996,1,1
+"Set-Transformer pooling",rwpe,13216,0.99935377,0.99934352,0.99937238,0
+"Gasse-2019 bipartite GCN",baseline,25600,0.99999997,0.99999996,0.99999998,1
+"Gasse-2019 bipartite GCN",rwpe,25600,0.99984387,0.99984108,0.99984533,0

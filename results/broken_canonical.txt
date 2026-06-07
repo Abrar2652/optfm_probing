@@ -1,0 +1,27 @@
+======================================================================
+C2 — Broken-canonical-pair integrity check
+======================================================================
+
+Pair: Canonical 1-WL indistinguishable pair (Chen et al. 2023)
+  A shape: (5, 6)
+  b_A = [1.0, 1.0, 1.0, 1.0, 2.0]
+  b_B = [1.0, 1.0, 1.0, 2.0, 1.0]
+
+[1] Brute-force isomorphism search over 5! x 6! = 86,400 pairs...
+    ISOMORPHIC. Explicit permutation found after 848 checks:
+      pi (constraints) = [0, 1, 2, 4, 3]
+      sigma (variables) = [1, 0, 3, 2, 5, 4]
+    => any permutation-equivariant model maps A and B to identical
+       embeddings; cos_sim = 1.0 on this pair is UNINFORMATIVE.
+
+[2] Integer feasibility of both members (scipy.milp):
+    MILP-A: feasible=True  solution=[1, 0, 0, 1, 0, 1]
+    MILP-B: feasible=True  solution=[1, 0, 1, 0, 0, 1]
+    => the docstring claim 'MILP-B infeasible' is FALSE; both are feasible.
+
+[3] Contrast: the corrected family is 1-WL equivalent AND non-isomorphic.
+    k=2: 1wl_equiv=True  isomorphic=False  A_comp=1  B_comp=2
+    k=3: 1wl_equiv=True  isomorphic=False  A_comp=1  B_comp=3
+
+CONCLUSION: the legacy 'canonical pair' is a degenerate (isomorphic) test
+case; the C_{4k} vs k*C_4 family is the valid 1-WL probe.

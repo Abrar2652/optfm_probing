@@ -87,7 +87,7 @@ class TransConvLayer(nn.Module):
         attention_num = attention_num + N * vs
         attention_num = attention_num[:qs.shape[0]]
 
-        all_ones = torch.ones([ks.shape[0]], device=ks.device)
+        all_ones = torch.ones([ks.shape[0]], device=ks.device, dtype=ks.dtype)
         ks_sum = torch.einsum("lhm,l->hm", ks, all_ones)
         attention_normalizer = torch.einsum("nhm,hm->nh", qs, ks_sum)
         attention_normalizer = attention_normalizer.unsqueeze(-1) + N
@@ -224,7 +224,7 @@ class _BipartiteConv(nn.Module):
             + self.fm_edge(edge_features)
             + self.fm_right(right_features[right_idx])
         )
-        aggregated = torch.zeros(n_right, msg.shape[1], device=msg.device)
+        aggregated = torch.zeros(n_right, msg.shape[1], device=msg.device, dtype=msg.dtype)
         aggregated.index_add_(0, right_idx, msg)
         return self.output(torch.cat([self.post(aggregated), right_features], dim=-1))
 
@@ -305,7 +305,7 @@ class HierarchicalOPTFM(nn.Module):
                                  edge_index: torch.Tensor,
                                  edge_attr: torch.Tensor) -> torch.Tensor:
         """Build the dense adjacency matrix (cons_n, var_n) from coo indices."""
-        M = torch.zeros(cons_n, var_n, device=edge_index.device)
+        M = torch.zeros(cons_n, var_n, device=edge_index.device, dtype=edge_attr.dtype)
         M[edge_index[0], edge_index[1]] = edge_attr.squeeze(-1)
         return M
 

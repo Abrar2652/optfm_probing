@@ -1,0 +1,13 @@
+model,dtype,mean_cos,max_linf,exact_frac
+"SGFormer+GCN (pretrained)",float32,1,0,1
+"SGFormer+GCN (random)",float32,0.99999998,0,1
+"TransConv only (random)",float32,1,0,1
+"GNN only (random)",float32,0.99999999,3.7252903e-09,1
+"Simple GCN (random)",float32,0.99999999,2.9802322e-08,1
+"Hierarchical OPTFM (random)",float32,1,5.9604645e-08,1
+"SGFormer+GCN (pretrained)",float64,1,0,1
+"SGFormer+GCN (random)",float64,1,0,1
+"TransConv only (random)",float64,1,0,1
+"GNN only (random)",float64,1,1.3877788e-17,1
+"Simple GCN (random)",float64,1,5.5511151e-17,1
+"Hierarchical OPTFM (random)",float64,1,5.5511151e-17,1

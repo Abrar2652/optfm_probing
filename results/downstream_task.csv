@@ -1,0 +1,7 @@
+model,baseline_acc,baseline_std,rwpe_acc,rwpe_std
+"SGFormer+GCN (pretrained)",0.38571429,0.072843132,1,0
+"SGFormer+GCN (random)",0.34285715,0.053452245,0.98571428,0.028571439
+"TransConv only (random)",0.34285715,0.094760707,1,0
+"GNN only (random)",0.34285715,0.053452245,0.38571429,0.072843132
+"Simple GCN (random)",0.34285715,0.053452245,1,0
+"Hierarchical OPTFM (random)",0.34285715,0.053452245,1,0

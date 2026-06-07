@@ -1,0 +1,19 @@
+pooling,model,mean_cos,max_linf,exact_frac
+mean,"SGFormer+GCN (pretrained)",1,0,1
+mean,"SGFormer+GCN (random)",0.99999998,0,1
+mean,"TransConv only (random)",1,0,1
+mean,"GNN only (random)",0.99999999,3.7252903e-09,1
+mean,"Simple GCN (random)",0.99999999,2.9802322e-08,1
+mean,"Hierarchical OPTFM (random)",1,5.9604645e-08,1
+sum,"SGFormer+GCN (pretrained)",1,0,1
+sum,"SGFormer+GCN (random)",0.99999997,0,1
+sum,"TransConv only (random)",0.99999996,0,1
+sum,"GNN only (random)",0.99999998,1.1920929e-07,1
+sum,"Simple GCN (random)",0.99999997,2.3841858e-07,1
+sum,"Hierarchical OPTFM (random)",1,9.5367432e-07,1
+max,"SGFormer+GCN (pretrained)",1,0,1
+max,"SGFormer+GCN (random)",0.99999999,0,1
+max,"TransConv only (random)",0.99999996,0,1
+max,"GNN only (random)",0.99999998,1.1920929e-07,1
+max,"Simple GCN (random)",0.99999997,2.3841858e-07,1
+max,"Hierarchical OPTFM (random)",0.99999998,5.9604645e-08,1

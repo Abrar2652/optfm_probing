@@ -1,0 +1,13 @@
+model,dtype,n_coords,max_abs_diff,mean_abs_diff,median_abs_diff,p99_abs_diff,frac_within_atol
+"SGFormer+GCN (pretrained)",float32,240,0,0,0,0,1
+"SGFormer+GCN (random)",float32,1200,1.4901161e-08,2.3283064e-11,0,0,1
+"TransConv only (random)",float32,1200,0,0,0,0,1
+"GNN only (random)",float32,1200,7.4505806e-09,1.9402554e-11,0,0,1
+"Simple GCN (random)",float32,1200,5.9604645e-08,4.1211024e-10,0,1.4901161e-08,1
+"Hierarchical OPTFM (random)",float32,1200,5.9604645e-08,5.7431559e-10,0,1.4901161e-08,1
+"SGFormer+GCN (pretrained)",float64,240,0,0,0,0,1
+"SGFormer+GCN (random)",float64,1200,5.5511151e-17,7.0834542e-20,0,0,1
+"TransConv only (random)",float64,1200,0,0,0,0,1
+"GNN only (random)",float64,1200,2.7755576e-17,9.2518585e-20,0,1.7347235e-20,1
+"Simple GCN (random)",float64,1200,5.5511151e-17,5.3487307e-19,0,2.7755576e-17,1
+"Hierarchical OPTFM (random)",float64,1200,1.6653345e-16,2.1900884e-18,0,5.5511151e-17,1

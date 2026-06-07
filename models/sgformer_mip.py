@@ -55,7 +55,7 @@ class TransConvLayer(nn.Module):
         attention_num = torch.einsum("nhm,hmd->nhd", qs, kvs)
         attention_num = attention_num + N * vs
         
-        all_ones = torch.ones([ks.shape[0]], device=ks.device)
+        all_ones = torch.ones([ks.shape[0]], device=ks.device, dtype=ks.dtype)
         ks_sum = torch.einsum("lhm,l->hm", ks, all_ones)
         attention_normalizer = torch.einsum("nhm,hm->nh", qs, ks_sum)
         attention_normalizer = attention_normalizer.unsqueeze(-1) + N
@@ -152,7 +152,7 @@ class BipartiteGraphConvolution(nn.Module):
         messages = self.feature_module_final(msg_left + msg_edge + msg_right)
         
         # Aggregate messages to right nodes (sum)
-        aggregated = torch.zeros(n_right, messages.shape[1], device=messages.device)
+        aggregated = torch.zeros(n_right, messages.shape[1], device=messages.device, dtype=messages.dtype)
         aggregated.index_add_(0, right_idx, messages)
         
         output = self.output_module(
@@ -354,7 +354,7 @@ class SimpleGCN(nn.Module):
         x = torch.cat([cons_emb, var_emb], dim=0)
         
         # Build adjacency (dense for small graphs)
-        adj = torch.zeros(n_total, n_total, device=x.device)
+        adj = torch.zeros(n_total, n_total, device=x.device, dtype=x.dtype)
         cons_idx, var_idx = edge_index[0], edge_index[1] + n_cons
         adj[cons_idx, var_idx] = 1.0
         adj[var_idx, cons_idx] = 1.0

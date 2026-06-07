@@ -1,0 +1,8 @@
+lemma,statement,component,model,transform,pooling,exact_frac
+L1,"Linear self-attention is a multiset function of its source set","trans_conv (self-attn)","TransConv only (random)",baseline,mean,1
+L2,"Cross-attention + edge-weighted aggregation preserve 1-WL",trans_conv_cross_*,"Hierarchical OPTFM (random)",baseline,mean,1
+L3,"Bipartite GCN branch is 1-WL bounded (MPNN)","GCN branch","GNN only (random)",baseline,mean,1
+L4,"Convex combination + symmetric pooling preserve 1-WL","fuse + pool(mean)","SGFormer+GCN (random)",baseline,mean,1
+L4,"Convex combination + symmetric pooling preserve 1-WL","fuse + pool(sum)","SGFormer+GCN (random)",baseline,sum,1
+L4,"Convex combination + symmetric pooling preserve 1-WL","fuse + pool(max)","SGFormer+GCN (random)",baseline,max,1
+L5,"Virtual-global-node augmentation does not escape 1-WL","VGN transform","Hierarchical OPTFM (random)",VGN,mean,1

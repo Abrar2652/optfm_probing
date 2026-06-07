@@ -1,0 +1,3 @@
+transform,n_seeds,mean_final_loss,std,ci_lo,ci_hi,ln2,mean_frac_identical_after
+baseline,5,0.69314748,4.7683716e-07,0.69314724,0.69314796,0.69314718,1
+rwpe_steps_4_6_8,5,0.00079274041,0.00086838461,8.8511067e-05,0.001614848,0.69314718,0

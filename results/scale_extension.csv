@@ -1,0 +1,7 @@
+k,n_nodes,cos_sim,linf,bit_identical
+30,120,1,0,True
+50,200,1,0,True
+75,300,1,0,True
+100,400,1,0,True
+150,600,1,5.5511151e-17,True
+200,800,1,1.3877788e-17,True

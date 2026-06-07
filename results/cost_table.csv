@@ -1,0 +1,11 @@
+model,params,ms_per_forward
+"Simple GCN (random)",736,0.077822
+"TransConv only (random)",1344,0.315294
+"GNN only (random)",5602,0.290964
+"SGFormer+GCN (pretrained)",6820,0.612644
+"SGFormer+GCN (random)",6820,0.630304
+"Hierarchical OPTFM (random)",10852,1.74476
+"Set-Transformer pooling",13216,0.591722
+"GraphGPS-style (MPNN+attn)",21568,0.846638
+"Graphormer-style (deg+adj)",21616,0.955316
+"Gasse-2019 bipartite GCN",25600,0.486674

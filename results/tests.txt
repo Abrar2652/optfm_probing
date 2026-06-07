@@ -1,0 +1,11 @@
+PASS tests.test_pairs.test_1wl_equivalent_all_depths
+PASS tests.test_pairs.test_component_mismatch
+PASS tests.test_pairs.test_degree_sequences_match
+PASS tests.test_pairs.test_node_and_edge_counts_match
+PASS tests.test_pairs.test_non_isomorphic
+PASS tests.test_encoders.test_bit_identity_reproduction
+PASS tests.test_encoders.test_determinism_same_seed
+PASS tests.test_encoders.test_permutation_equivariance
+PASS tests.test_encoders.test_specificity_distinguishable_pair
+
+9 passed, 0 failed

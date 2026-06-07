@@ -148,6 +148,54 @@ def make_rwpe_transform(steps=(4, 6, 8), cons_step: int = 4, cons_scale: float =
 
 
 # ---------------------------------------------------------------------------
+# Laplacian-eigenvector Positional Encoding (LapPE)
+# ---------------------------------------------------------------------------
+
+def make_lappe_transform(k_eigs: int = 3) -> Transform:
+    """
+    Laplacian eigenvector positional encoding (Dwivedi & Bresson 2021).
+
+    Inject the first `k_eigs` non-trivial eigenvectors of the combinatorial
+    Laplacian L = D - A of the full bipartite graph into the variable feature
+    slots (6, 7, 8), with the constraint part added to the single cons feature.
+
+    LapPE distinguishes C_{4k} from k*C_4 because their Laplacian spectra differ
+    (a single 4k-cycle vs. k copies of C_4). Caveats (reported in the paper):
+      * sign ambiguity — we fix it with a largest-|component|-positive convention;
+      * basis ambiguity under eigenvalue multiplicity (severe for k*C_4, which has
+        highly degenerate eigenvalues), so LapPE is a *detectable* but not
+        canonical escape, weaker than the deterministic RWPE return probabilities.
+    """
+    def transform(milp: MILPInstance, seed: int = 0) -> MILPInstance:
+        n_cons, n_vars = milp.A.shape
+        N = n_cons + n_vars
+        A_full = np.zeros((N, N), dtype=np.float64)
+        A_full[:n_cons, n_cons:] = (milp.A != 0).astype(np.float64)
+        A_full[n_cons:, :n_cons] = A_full[:n_cons, n_cons:].T
+        deg = A_full.sum(axis=1)
+        L = np.diag(deg) - A_full
+        evals, evecs = np.linalg.eigh(L)            # ascending
+        # skip the first eigenvector (constant / trivial); take next k_eigs
+        cols = evecs[:, 1:1 + k_eigs]
+        # sign convention: largest |component| positive
+        for j in range(cols.shape[1]):
+            idx = np.argmax(np.abs(cols[:, j]))
+            if cols[idx, j] < 0:
+                cols[:, j] = -cols[:, j]
+        K = cols.shape[1]
+        var_pe = cols[n_cons:, :]
+        cons_pe = cols[:n_cons, :].mean(axis=1)     # collapse to single cons slot
+
+        new_var = milp.var_features.copy()
+        new_var[:, 6:6 + K] = var_pe
+        new_cons = milp.cons_features.copy()
+        new_cons[:, 0] = new_cons[:, 0] + cons_pe
+        return replace(milp, var_features=new_var.astype(np.float32),
+                       cons_features=new_cons.astype(np.float32))
+    return transform
+
+
+# ---------------------------------------------------------------------------
 # Registry
 # ---------------------------------------------------------------------------
 
@@ -235,5 +283,6 @@ TRANSFORMS: Dict[str, Transform] = {
     "lp_reduced":     lp_reduced_transform,
     "lp_primal_dual": lp_primal_dual_transform,
     "rwpe_steps_4_6_8": make_rwpe_transform(steps=(4, 6, 8), cons_step=4, cons_scale=1.0),
+    "lappe_3": make_lappe_transform(k_eigs=3),
     "virtual_global_node": virtual_global_node_transform,
 }

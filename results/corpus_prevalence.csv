@@ -1,0 +1,3 @@
+family,n_instances,frac_with_wl_twins,mean_class_node_ratio
+set_cover,300,0.12,0.99393939
+comb_auction,300,0.063333333,0.99712121
