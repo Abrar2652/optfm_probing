@@ -85,7 +85,6 @@ data/              MILP pair constructions + standard-family generators
 scripts/           experiments, transforms, and the diagnostic
 visualization/     figure generation
 tests/             pair-property and encoder-invariance tests
-paper/             write-up and proof sketch
 results/           generated CSVs and figures
 ```
 
